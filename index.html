@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doppia Lettura · MEDyLAB × Self Coherence</title>
+<meta name="description" content="Lo stress si misura due volte: variabilità cardiaca (HRV) con Self Coherence e cortisolo salivare con MEDyLAB. Il percorso integrato e tutti i servizi dei due centri.">
+<meta property="og:title" content="Doppia Lettura · MEDyLAB × Self Coherence">
+<meta property="og:description" content="Lo stress si misura due volte: dal cuore e dalla saliva.">
+<link rel="canonical" href="https://dnafinder.github.io/doppia-lettura/">
+<meta property="og:url" content="https://dnafinder.github.io/doppia-lettura/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 22'%3E%3Cpath d='M1 11h7l3-8 4 16 3-8h3' fill='none' stroke='%23c23f37' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='27' cy='11' r='5.5' fill='%231c767c'/%3E%3C/svg%3E">
+
+<style>
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/bricolage-grotesque-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/bricolage-grotesque-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/figtree-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/figtree-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/figtree-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/figtree-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2')}
+
+:root{
+  --bg:#f2f5f4; --surface:#ffffff; --surface-2:#e8eeed; --ink:#15232a; --muted:#52646b; --line:#d3dcdc;
+  --heart:#c23f37; --heart-soft:#c23f3724; --salt:#1c767c; --salt-soft:#1c767c24; --night:#15232a0d; --gold:#b9852b;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e1619; --surface:#152125; --surface-2:#1b2a2f; --ink:#e4eded; --muted:#9bb0b4; --line:#27393e;
+    --heart:#ee6c61; --heart-soft:#ee6c612e; --salt:#52b8be; --salt-soft:#52b8be2b; --night:#ffffff0a; --gold:#e0b25a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e1619; --surface:#152125; --surface-2:#1b2a2f; --ink:#e4eded; --muted:#9bb0b4; --line:#27393e;
+  --heart:#ee6c61; --heart-soft:#ee6c612e; --salt:#52b8be; --salt-soft:#52b8be2b; --night:#ffffff0a; --gold:#e0b25a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--salt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:700}
+h3{font-size:1.28rem;font-weight:700;letter-spacing:0}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.14rem;color:var(--muted);max-width:60ch}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.ico{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* illustration classes */
+.il-ink{stroke:var(--ink);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.il-surf{fill:var(--surface);stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round}
+.il-heart{fill:var(--heart)} .il-salt{fill:var(--salt)}
+.il-hs{fill:var(--heart-soft)} .il-ss{fill:var(--salt-soft)}
+.il-hline{stroke:var(--heart);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.il-sline{stroke:var(--salt);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.il-thin{stroke:var(--ink);stroke-width:1.4;fill:none;stroke-linecap:round;opacity:.55}
+.il-lab{font:500 13px var(--mono);fill:var(--ink);letter-spacing:.04em}
+.il-pill{fill:var(--ink)} .il-pilltx{font:600 13px var(--body);fill:var(--bg)}
+.pulse{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.4s .2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none;stroke-dashoffset:0}}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.mark svg{flex:none}
+.nav{display:flex;gap:20px;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+@media (max-width:760px){.nav{display:none}}
+
+/* hero */
+.hero{padding-block:48px 56px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:20px}}
+.hero h1{font-size:clamp(2.4rem,5.4vw,3.9rem);font-weight:800;margin-block:14px 20px}
+.hero h1 .h{color:var(--heart)} .hero h1 .s{color:var(--salt)}
+.hero-art svg{width:100%;height:auto;display:block;max-width:560px;margin-inline:auto}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:1.5px solid var(--ink);transition:transform .15s ease;font-family:inherit;cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+.btn-solid{background:var(--ink);color:var(--bg)}
+.btn-ghost{background:transparent;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+
+section{padding-block:72px}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.head{display:grid;gap:14px;margin-bottom:40px;max-width:760px}
+
+/* giornata */
+.day{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:center}
+@media (max-width:900px){.day{grid-template-columns:1fr;gap:24px}}
+.chart{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:18px 14px 12px;margin:0}
+.chart figcaption{font-size:.84rem;color:var(--muted);padding:6px 6px 0}
+.duo{width:100%;height:auto;display:block}
+.duo .night{fill:var(--night)}
+.duo .grid{stroke:var(--line);stroke-width:1}
+.duo .axis{stroke:var(--muted);stroke-width:1}
+.duo .tick{fill:var(--muted);font:500 12px var(--mono)}
+.duo .lab{font:600 13px var(--body)}
+.duo .lab-h{fill:var(--heart)} .duo .lab-c{fill:var(--salt)}
+.duo .l-h{fill:none;stroke:var(--heart);stroke-width:2;stroke-linejoin:round}
+.duo .l-c{fill:none;stroke:var(--salt);stroke-width:2.5;stroke-linejoin:round}
+.duo .a-c{fill:var(--salt-soft)}
+.duo .d-h{fill:var(--surface);stroke:var(--heart);stroke-width:2}
+.duo .d-c{fill:var(--salt);stroke:var(--surface);stroke-width:2}
+.duo .ann{fill:var(--ink);font:500 12px var(--body)}
+.readings{display:grid;gap:22px}
+.readings div{display:grid;grid-template-columns:14px 1fr;gap:14px}
+.readings div::before{content:"";width:12px;height:12px;border-radius:50%;margin-top:7px;background:var(--c)}
+.readings p{color:var(--muted)}
+.readings b{color:var(--ink);font-weight:600}
+
+/* due sistemi */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface)}
+@media (max-width:760px){.pair{grid-template-columns:1fr}}
+.side{padding:30px 28px;display:grid;gap:18px;align-content:start}
+.side + .side{border-left:1px solid var(--line)}
+@media (max-width:760px){.side + .side{border-left:0;border-top:1px solid var(--line)}}
+.side-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.side-top svg{width:120px;height:auto;flex:none}
+.side-h h3{color:var(--heart)} .side-s h3{color:var(--salt)}
+.tag{display:inline-block;font:500 .74rem var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.side-h .tag{background:var(--heart-soft);color:var(--heart)}
+.side-s .tag{background:var(--salt-soft);color:var(--salt)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0;font-size:.97rem}
+.facts dt{font:500 .78rem var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:3px}
+.facts dd{margin:0}
+.quip{margin-top:26px;font-family:var(--display);font-size:1.25rem;font-weight:500;max-width:52ch}
+
+/* perché insieme */
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px}
+@media (max-width:760px){.why{grid-template-columns:1fr;gap:28px}}
+.why article{display:grid;grid-template-columns:64px 1fr;gap:6px 18px;padding-top:18px;border-top:2px solid var(--ink)}
+.why article svg{grid-row:1 / span 2;width:64px;height:40px}
+.why p{color:var(--muted);max-width:56ch}
+
+/* percorso */
+.route{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:start}
+@media (max-width:900px){.route{grid-template-columns:1fr;gap:32px}}
+.route-intro{display:grid;gap:18px}
+.includes{display:grid;gap:10px;margin:6px 0 0;padding:0;list-style:none}
+.includes li{display:grid;grid-template-columns:14px 1fr;gap:12px;align-items:baseline}
+.includes li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ink);transform:translateY(1px)}
+.includes li.h::before{background:var(--heart)} .includes li.s::before{background:var(--salt)}
+.steps{list-style:none;margin:0;padding:0;display:grid;border:1px solid var(--line);border-radius:18px;background:var(--bg);overflow:hidden}
+.steps li{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+.steps .ic.h{color:var(--heart)} .steps .ic.s{color:var(--salt)}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted);font-size:.95rem}
+.steps em{font:500 .8rem var(--mono);font-style:normal;color:var(--muted)}
+.note{font-size:.9rem;color:var(--muted)}
+
+/* coupon */
+.coupon{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 32px;align-items:center;padding:26px 30px;border-radius:18px;background:var(--surface);border:1.5px dashed var(--gold);position:relative;margin-bottom:48px}
+.coupon::before,.coupon::after{content:"";position:absolute;top:50%;width:22px;height:22px;border-radius:50%;background:var(--bg);border:1.5px dashed var(--gold);transform:translateY(-50%)}
+.coupon::before{left:-12px;clip-path:inset(0 0 0 50%)} .coupon::after{right:-12px;clip-path:inset(0 50% 0 0)}
+@media (max-width:700px){.coupon{grid-template-columns:1fr}}
+.coupon .eyebrow{color:var(--gold)}
+.coupon h3{font-size:1.6rem;margin-block:6px}
+.coupon p{color:var(--muted)}
+.code{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.code output{font:500 1.25rem var(--mono);letter-spacing:.06em;padding:10px 16px;border-radius:10px;background:var(--bg);border:1px solid var(--line);user-select:all}
+.big{font-family:var(--display);font-weight:800;font-size:3.2rem;color:var(--gold);line-height:1}
+
+/* esami */
+.shops{display:grid;grid-template-columns:1.15fr 1fr;gap:36px}
+@media (max-width:900px){.shops{grid-template-columns:1fr}}
+.shop{display:grid;gap:14px;align-content:start}
+.shop-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:2px solid var(--c)}
+.shop-head h3{color:var(--c)}
+.shop-head small{font-size:.86rem;color:var(--muted)}
+.shop.m{--c:var(--salt)} .shop.sc{--c:var(--heart)}
+.grp{font:500 .76rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.grp small{display:block;text-transform:none;letter-spacing:0;font:400 .88rem var(--body);margin-top:2px}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.links a{display:grid;grid-template-columns:auto 1fr auto;gap:2px 14px;align-items:center;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:border-color .15s ease}
+.links a:hover{border-color:var(--c)}
+.links .ico{grid-row:1 / span 2;color:var(--c);width:30px;height:30px}
+.links b{font-weight:600;grid-column:2}
+.links span{grid-column:2;color:var(--muted);font-size:.92rem;line-height:1.45}
+.links i{grid-row:1 / span 2;grid-column:3;font-style:normal;font-family:var(--mono);color:var(--c);font-size:1.1rem}
+
+/* chi siamo */
+.who{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.who{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;align-content:start}
+.media{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;background:var(--surface-2)}
+.media svg.fb{position:absolute;inset:0;width:100%;height:100%}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card-body{padding:24px 28px 28px;display:grid;gap:14px}
+.card .brand{font-family:var(--display);font-weight:800;font-size:1.6rem}
+.card.m .brand{color:var(--salt)} .card.sc .brand{color:var(--heart)}
+.card p{color:var(--muted)}
+.person{display:flex;align-items:center;gap:14px}
+.avatar{position:relative;width:64px;height:64px;border-radius:50%;overflow:hidden;flex:none;background:var(--c);display:grid;place-items:center;color:#fff;font:800 1.2rem var(--display)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card.m{--c:var(--salt)} .card.sc{--c:var(--heart)}
+.person b{display:block;color:var(--ink)} .person span{font-size:.92rem;color:var(--muted)}
+.card .go{font-weight:600;text-decoration-thickness:1.5px;text-underline-offset:4px;justify-self:start}
+
+.pro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+@media (max-width:860px){.pro{grid-template-columns:1fr;gap:24px}}
+
+.warn{border-left:3px solid var(--muted);padding:4px 0 4px 18px;color:var(--muted);font-size:.95rem;max-width:80ch}
+
+footer{padding-block:40px 56px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+footer .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media (max-width:760px){footer .cols{grid-template-columns:1fr}}
+footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
+.nums{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.6 4.6 6 7.9 6 11a6 6 0 0 1-12 0c0-3.1 2.4-6.4 6-11z"/><path d="M9.5 15.5a2.6 2.6 0 0 0 2.5 2"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><path d="M3 18h18M7 18a5 5 0 0 1 10 0M12 7v3M5.8 10.8l1.9 1.9M18.2 10.8l-1.9 1.9M9 21h6"/></symbol>
+  <symbol id="i-sun2" viewBox="0 0 24 24"><path d="M3 18h18M7 18a5 5 0 0 1 10 0M12 7v3M5.8 10.8l1.9 1.9M18.2 10.8l-1.9 1.9"/><path d="M19 4c1.2 1.6 2 2.7 2 3.8a2 2 0 0 1-4 0c0-1.1.8-2.2 2-3.8z"/></symbol>
+  <symbol id="i-ster" viewBox="0 0 24 24"><g transform="translate(1.6 -1.25)"><path d="M6.80 17.00 L4.20 18.50 L1.60 17.00 L1.60 14.00 L4.20 12.50 L6.80 14.00Z M11.99 17.00 L9.40 18.50 L6.80 17.00 L6.80 14.00 L9.40 12.50 L11.99 14.00Z M14.59 12.50 L11.99 14.00 L9.40 12.50 L9.40 9.50 L11.99 8.00 L14.59 9.50Z M14.59 9.50 L14.59 12.50 L17.45 13.43 L19.21 11.00 L17.45 8.57Z"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/><path d="M6 12.5h3l1.5-2.5 2 4 1.5-1.5h4"/></symbol>
+  <symbol id="i-thy" viewBox="0 0 24 24"><path d="M11 9C9.5 5.5 5 5.5 5 10c0 4.5 3 8 5.5 7.2 1-.3 1-2 .5-3.5M13 9c1.5-3.5 6-3.5 6 1 0 4.5-3 8-5.5 7.2-1-.3-1-2-.5-3.5M10.5 13.5h3M12 4v4"/></symbol>
+  <symbol id="i-curve" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M5.5 16.5c3 0 3.5-9 6.5-9s3.5 6 7 7.5"/><circle cx="12" cy="7.5" r="1.2"/></symbol>
+  <symbol id="i-kid" viewBox="0 0 24 24"><path d="M14.5 4C10 4 6 7.5 6 13c0 4 2.4 7 5.4 7 2.2 0 3.1-1.6 3.1-3.3 0-1.9-1.6-2.6-1.6-4.2 0-1.4 1.2-2.1 2.6-2.4C17.8 9.6 19 8.5 19 7c0-1.8-1.8-3-4.5-3z"/><path d="M12.9 12.5H9"/></symbol>
+  <symbol id="i-stone" viewBox="0 0 24 24"><path d="M12 3l6 5-2.2 11H8.2L6 8z M6 8h12 M12 3l-2 5 2 11 2-11z"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.2L20 7.5H6.4"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5v8.5l-9 5-9-5z M3 8l9 5 9-5 M12 13v8.5 M7.5 5.5l9 5"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M6.5 14h1M9.5 14h1M12.5 14h1M15.5 14h1M6.5 17.5h1"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5.2 9.2A2 2 0 0 0 6.5 21h11a2 2 0 0 0 1.7-2.8L14 9V3M7.2 15h9.6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v10.5H10L5 19.5v-4H4z M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 12h4l2-5 3 10 2.5-7 1.5 2h7"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z M6 11v5c3.5 2.5 8.5 2.5 12 0v-5 M22 9v5"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M10.9 7l-4.8 9M13.1 7l4.8 9M7.2 18h9.6"/></symbol>
+  <symbol id="i-lab" viewBox="0 0 24 24"><path d="M6 3h4M8 3v12a3 3 0 0 0 6 0 M14 15V3h4v12a2 2 0 1 1-4 0 M8 10h2"/></symbol>
+  <symbol id="i-dev" viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="8" rx="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="19" r="2"/><path d="M5.5 6.4L8 8.5M16 15.5l2.6 2.2"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inizio" aria-label="Doppia Lettura, torna all'inizio">
+      <svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><path d="M1 11h7l3-8 4 16 3-8h3" fill="none" stroke="var(--heart)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="27" cy="11" r="5.5" fill="var(--salt)"/></svg>
+      Doppia Lettura
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="#perche">Perché due</a>
+      <a href="#percorso">Il percorso</a>
+      <a href="#esami">Esami e servizi</a>
+      <a href="#chi">Chi siamo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inizio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">MEDyLAB × Self Coherence</p>
+        <h1>Lo stress si misura due volte: dal <span class="h">cuore</span> e dalla <span class="s">saliva</span>.</h1>
+        <p class="lede">La variabilità della frequenza cardiaca mostra come reagisce il sistema nervoso, minuto per minuto. Il cortisolo salivare mostra quanto quella reazione pesa sull'organismo nell'arco della giornata. Lette insieme, nella stessa settimana, danno un quadro che nessuno dei due esami offre da solo.</p>
+        <div class="cta">
+          <a class="btn btn-solid" href="#percorso">Il percorso integrato</a>
+          <a class="btn btn-ghost" href="#esami">Esami e servizi</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 560 470" role="img" aria-labelledby="hT">
+          <title id="hT">Un sensore cardiaco indossabile e una provetta per la saliva: due strumenti che si sovrappongono nella lettura integrata</title>
+          <circle cx="205" cy="220" r="185" class="il-hs"/>
+          <circle cx="355" cy="220" r="185" class="il-ss"/>
+          <g id="g-device">
+            <!-- elettrodi e sensore HRV -->
+            <path d="M92 112 C 120 150, 118 180, 138 196" class="il-ink"/>
+            <path d="M190 240 C 200 270, 188 290, 168 318" class="il-ink"/>
+            <circle cx="88" cy="104" r="30" class="il-surf"/>
+            <circle cx="88" cy="104" r="11" class="il-heart"/>
+            <circle cx="164" cy="328" r="30" class="il-surf"/>
+            <circle cx="164" cy="328" r="11" class="il-heart"/>
+            <g transform="rotate(-14 165 218)">
+              <rect x="120" y="190" width="92" height="58" rx="20" class="il-surf"/>
+              <rect x="134" y="204" width="44" height="6" rx="3" class="il-heart" opacity=".35"/>
+              <circle cx="194" cy="219" r="6" class="il-heart"/>
+              <path d="M134 228h10l4-8 6 14 4-6h12" class="il-hline" style="stroke-width:2"/>
+            </g>
+          </g>
+          <g id="g-tube">
+            <!-- provetta per saliva -->
+            <rect x="380" y="150" width="66" height="190" rx="30" class="il-surf"/>
+            <path d="M383 280 H443 V310 a30 30 0 0 1 -60 0 Z" class="il-salt" opacity=".35"/>
+            <rect x="394" y="168" width="38" height="78" rx="14" class="il-surf" style="stroke-width:1.6"/>
+            <path d="M400 186h26M400 198h26M400 210h26M400 222h26M400 234h20" class="il-thin"/>
+            <rect x="370" y="118" width="86" height="42" rx="11" class="il-salt"/>
+            <path d="M378 131h70" style="stroke:var(--surface);stroke-width:2;opacity:.45"/>
+            <rect x="383" y="258" width="60" height="14" rx="3" class="il-surf" style="stroke-width:1.4"/>
+            <path d="M488 250c11 14 18 24 18 33a18 18 0 0 1 -36 0c0-9 7-19 18-33z" class="il-salt"/>
+            <path d="M481 288a8 8 0 0 0 7 7" style="stroke:var(--surface);stroke-width:2.5;fill:none;stroke-linecap:round"/>
+          </g>
+          <rect x="232" y="208" width="96" height="28" rx="14" class="il-pill"/>
+          <text x="280" y="227" text-anchor="middle" class="il-pilltx">insieme</text>
+          <text x="70" y="400" class="il-lab">HRV · 5 giorni</text>
+          <text x="398" y="400" class="il-lab">cortisolo · a casa</text>
+          <path class="il-hline pulse" d="M20 440 H70 l8 -26 l12 46 l9 -30 l5 10 H150 l8 -26 l12 46 l9 -30 l5 10 H232 l8 -26 l12 46 l9 -30 l5 10 H300"/>
+          <path class="il-sline" d="M300 440 C 320 440, 330 404, 350 404 S 400 432, 450 438 S 520 440, 540 440"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Una giornata, due tracciati</p>
+        <h2>Stessa persona, stesse ore, due strumenti</h2>
+      </div>
+      <div class="day">
+        <figure class="chart">
+          <svg viewBox="0 0 720 400" role="img" aria-labelledby="gT gD" class="duo"><title id="gT">Una giornata letta due volte</title><desc id="gD">Schema illustrativo: la variabilità cardiaca è alta nel sonno e scende di giorno con due cali da stress; il cortisolo salivare ha il picco dopo il risveglio e scende fino alla sera.</desc>
+<rect x="64.0" y="22" width="171.2" height="346" class="night"/>
+<rect x="656.5" y="22" width="39.5" height="346" class="night"/>
+<line x1="64" x2="696" y1="146.7" y2="146.7" class="grid"/><text x="56" y="150.7" class="tick" text-anchor="end">20</text>
+<line x1="64" x2="696" y1="100.0" y2="100.0" class="grid"/><text x="56" y="104.0" class="tick" text-anchor="end">40</text>
+<line x1="64" x2="696" y1="53.3" y2="53.3" class="grid"/><text x="56" y="57.3" class="tick" text-anchor="end">60</text>
+<line x1="64" x2="696" y1="360.0" y2="360.0" class="grid"/><text x="56" y="364.0" class="tick" text-anchor="end">0</text>
+<line x1="64" x2="696" y1="328.2" y2="328.2" class="grid"/><text x="56" y="332.2" class="tick" text-anchor="end">5</text>
+<line x1="64" x2="696" y1="296.4" y2="296.4" class="grid"/><text x="56" y="300.4" class="tick" text-anchor="end">10</text>
+<line x1="64" x2="696" y1="264.5" y2="264.5" class="grid"/><text x="56" y="268.5" class="tick" text-anchor="end">15</text>
+<line x1="64" x2="696" y1="232.7" y2="232.7" class="grid"/><text x="56" y="236.7" class="tick" text-anchor="end">20</text>
+<text x="64" y="16" class="lab lab-h">Cuore · RMSSD (ms)</text>
+<text x="64" y="206" class="lab lab-c">Saliva · cortisolo (nmol/L)</text>
+<path d="M64.0,54.0 L70.6,64.6 L77.2,61.6 L83.8,59.2 L90.3,64.8 L96.9,60.3 L103.5,59.9 L110.1,68.4 L116.7,53.7 L123.2,55.4 L129.8,61.2 L136.4,58.4 L143.0,54.5 L149.6,57.9 L156.2,57.4 L162.8,63.1 L169.3,52.4 L175.9,54.1 L182.5,52.9 L189.1,61.6 L195.7,44.9 L202.2,55.7 L208.8,61.5 L215.4,52.3 L222.0,66.0 L228.6,76.3 L235.2,74.1 L241.8,96.6 L248.3,92.3 L254.9,112.6 L261.5,127.1 L268.1,117.6 L274.7,131.3 L281.2,119.9 L287.8,133.0 L294.4,125.6 L301.0,128.1 L307.6,114.2 L314.2,112.4 L320.8,122.9 L327.3,116.7 L333.9,128.5 L340.5,131.2 L347.1,144.6 L353.7,145.4 L360.2,139.3 L366.8,121.4 L373.4,110.6 L380.0,119.6 L386.6,122.5 L393.2,108.9 L399.8,116.3 L406.3,115.8 L412.9,115.9 L419.5,118.8 L426.1,120.5 L432.7,127.2 L439.2,118.1 L445.8,122.1 L452.4,116.3 L459.0,125.2 L465.6,141.9 L472.2,141.3 L478.8,131.7 L485.3,135.9 L491.9,132.0 L498.5,127.1 L505.1,125.7 L511.7,121.1 L518.2,125.0 L524.8,110.5 L531.4,119.0 L538.0,116.2 L544.6,108.7 L551.2,107.7 L557.8,115.8 L564.3,112.3 L570.9,108.5 L577.5,111.5 L584.1,117.9 L590.7,103.6 L597.2,100.7 L603.8,101.4 L610.4,106.5 L617.0,101.0 L623.6,99.1 L630.2,93.8 L636.8,81.7 L643.3,76.6 L649.9,77.1 L656.5,73.8 L663.1,71.2 L669.7,72.8 L676.2,71.2 L682.8,72.3 L689.4,67.2 L696.0,53.4" class="l-h"/>
+<path d="M64.0,348.5 L66.6,348.5 L69.3,348.4 L71.9,348.3 L74.5,348.2 L77.2,348.1 L79.8,348.0 L82.4,348.0 L85.1,347.9 L87.7,347.8 L90.3,347.7 L93.0,347.6 L95.6,347.5 L98.2,347.4 L100.9,347.4 L103.5,347.3 L106.1,347.2 L108.8,347.1 L111.4,347.0 L114.0,346.9 L116.7,346.8 L119.3,346.8 L121.9,346.7 L124.6,346.6 L127.2,346.5 L129.8,346.4 L132.5,346.3 L135.1,346.3 L137.7,346.2 L140.4,346.1 L143.0,346.0 L145.6,345.1 L148.3,344.2 L150.9,343.3 L153.5,342.4 L156.2,341.5 L158.8,340.7 L161.4,339.8 L164.1,338.9 L166.7,338.0 L169.3,337.1 L172.0,336.2 L174.6,335.3 L177.2,334.4 L179.9,333.5 L182.5,332.6 L185.1,331.7 L187.8,330.9 L190.4,330.0 L193.0,329.1 L195.7,328.2 L198.3,325.6 L200.9,323.1 L203.6,320.5 L206.2,318.0 L208.8,315.5 L211.5,312.9 L214.1,310.4 L216.7,307.8 L219.4,305.3 L222.0,302.7 L224.6,300.2 L227.3,297.6 L229.9,295.1 L232.5,292.5 L235.2,290.0 L237.8,283.6 L240.4,277.3 L243.1,270.9 L245.7,264.5 L248.3,258.2 L251.0,251.8 L253.6,245.5 L256.2,247.8 L258.9,250.2 L261.5,252.6 L264.1,255.0 L266.8,257.4 L269.4,259.8 L272.0,262.2 L274.7,264.5 L277.3,266.1 L279.9,267.7 L282.6,269.3 L285.2,270.9 L287.8,272.5 L290.5,274.1 L293.1,275.7 L295.7,277.3 L298.4,278.9 L301.0,280.5 L303.6,282.0 L306.3,283.6 L308.9,285.2 L311.5,286.8 L314.2,288.4 L316.8,290.0 L319.4,291.6 L322.1,293.2 L324.7,294.8 L327.3,296.4 L330.0,297.3 L332.6,298.1 L335.2,299.0 L337.9,299.9 L340.5,300.8 L343.1,301.7 L345.8,302.6 L348.4,303.5 L351.0,304.4 L353.7,305.3 L356.3,306.2 L358.9,307.1 L361.6,307.9 L364.2,308.8 L366.8,309.7 L369.5,310.6 L372.1,311.5 L374.7,312.4 L377.4,313.3 L380.0,314.2 L382.6,314.6 L385.3,315.1 L387.9,315.5 L390.5,316.0 L393.2,316.4 L395.8,316.9 L398.4,317.3 L401.1,317.7 L403.7,318.2 L406.3,318.6 L409.0,319.1 L411.6,319.5 L414.2,320.0 L416.9,320.4 L419.5,320.9 L422.1,321.3 L424.8,321.8 L427.4,322.2 L430.0,322.6 L432.7,323.1 L435.3,323.4 L437.9,323.8 L440.6,324.1 L443.2,324.4 L445.8,324.8 L448.5,325.1 L451.1,325.5 L453.7,325.8 L456.4,326.1 L459.0,326.5 L461.6,326.8 L464.3,327.2 L466.9,327.5 L469.5,327.8 L472.2,328.2 L474.8,328.5 L477.4,328.9 L480.1,329.2 L482.7,329.5 L485.3,329.9 L488.0,330.2 L490.6,330.6 L493.2,330.9 L495.9,331.2 L498.5,331.6 L501.1,331.9 L503.8,332.3 L506.4,332.6 L509.0,332.9 L511.7,333.3 L514.3,333.6 L516.9,333.9 L519.6,334.2 L522.2,334.5 L524.8,334.8 L527.5,335.1 L530.1,335.4 L532.7,335.6 L535.4,335.9 L538.0,336.2 L540.6,336.5 L543.3,336.8 L545.9,337.1 L548.5,337.4 L551.2,337.7 L553.8,338.0 L556.4,338.3 L559.1,338.6 L561.7,338.9 L564.3,339.2 L567.0,339.5 L569.6,339.8 L572.2,340.1 L574.9,340.4 L577.5,340.7 L580.1,341.0 L582.8,341.3 L585.4,341.6 L588.0,341.9 L590.7,342.2 L593.3,342.4 L595.9,342.7 L598.6,342.9 L601.2,343.2 L603.8,343.5 L606.5,343.7 L609.1,344.0 L611.7,344.2 L614.4,344.5 L617.0,344.7 L619.6,345.0 L622.3,345.2 L624.9,345.5 L627.5,345.7 L630.2,346.0 L632.8,346.3 L635.4,346.5 L638.1,346.8 L640.7,347.0 L643.3,347.3 L646.0,347.3 L648.6,347.4 L651.2,347.5 L653.9,347.5 L656.5,347.6 L659.1,347.7 L661.8,347.7 L664.4,347.8 L667.0,347.8 L669.7,347.9 L672.3,348.0 L674.9,348.0 L677.6,348.1 L680.2,348.2 L682.8,348.2 L685.5,348.3 L688.1,348.4 L690.7,348.4 L693.4,348.5 L696.0,348.5 L696.0,360.0 L64.0,360.0 Z" class="a-c"/><path d="M64.0,348.5 L66.6,348.5 L69.3,348.4 L71.9,348.3 L74.5,348.2 L77.2,348.1 L79.8,348.0 L82.4,348.0 L85.1,347.9 L87.7,347.8 L90.3,347.7 L93.0,347.6 L95.6,347.5 L98.2,347.4 L100.9,347.4 L103.5,347.3 L106.1,347.2 L108.8,347.1 L111.4,347.0 L114.0,346.9 L116.7,346.8 L119.3,346.8 L121.9,346.7 L124.6,346.6 L127.2,346.5 L129.8,346.4 L132.5,346.3 L135.1,346.3 L137.7,346.2 L140.4,346.1 L143.0,346.0 L145.6,345.1 L148.3,344.2 L150.9,343.3 L153.5,342.4 L156.2,341.5 L158.8,340.7 L161.4,339.8 L164.1,338.9 L166.7,338.0 L169.3,337.1 L172.0,336.2 L174.6,335.3 L177.2,334.4 L179.9,333.5 L182.5,332.6 L185.1,331.7 L187.8,330.9 L190.4,330.0 L193.0,329.1 L195.7,328.2 L198.3,325.6 L200.9,323.1 L203.6,320.5 L206.2,318.0 L208.8,315.5 L211.5,312.9 L214.1,310.4 L216.7,307.8 L219.4,305.3 L222.0,302.7 L224.6,300.2 L227.3,297.6 L229.9,295.1 L232.5,292.5 L235.2,290.0 L237.8,283.6 L240.4,277.3 L243.1,270.9 L245.7,264.5 L248.3,258.2 L251.0,251.8 L253.6,245.5 L256.2,247.8 L258.9,250.2 L261.5,252.6 L264.1,255.0 L266.8,257.4 L269.4,259.8 L272.0,262.2 L274.7,264.5 L277.3,266.1 L279.9,267.7 L282.6,269.3 L285.2,270.9 L287.8,272.5 L290.5,274.1 L293.1,275.7 L295.7,277.3 L298.4,278.9 L301.0,280.5 L303.6,282.0 L306.3,283.6 L308.9,285.2 L311.5,286.8 L314.2,288.4 L316.8,290.0 L319.4,291.6 L322.1,293.2 L324.7,294.8 L327.3,296.4 L330.0,297.3 L332.6,298.1 L335.2,299.0 L337.9,299.9 L340.5,300.8 L343.1,301.7 L345.8,302.6 L348.4,303.5 L351.0,304.4 L353.7,305.3 L356.3,306.2 L358.9,307.1 L361.6,307.9 L364.2,308.8 L366.8,309.7 L369.5,310.6 L372.1,311.5 L374.7,312.4 L377.4,313.3 L380.0,314.2 L382.6,314.6 L385.3,315.1 L387.9,315.5 L390.5,316.0 L393.2,316.4 L395.8,316.9 L398.4,317.3 L401.1,317.7 L403.7,318.2 L406.3,318.6 L409.0,319.1 L411.6,319.5 L414.2,320.0 L416.9,320.4 L419.5,320.9 L422.1,321.3 L424.8,321.8 L427.4,322.2 L430.0,322.6 L432.7,323.1 L435.3,323.4 L437.9,323.8 L440.6,324.1 L443.2,324.4 L445.8,324.8 L448.5,325.1 L451.1,325.5 L453.7,325.8 L456.4,326.1 L459.0,326.5 L461.6,326.8 L464.3,327.2 L466.9,327.5 L469.5,327.8 L472.2,328.2 L474.8,328.5 L477.4,328.9 L480.1,329.2 L482.7,329.5 L485.3,329.9 L488.0,330.2 L490.6,330.6 L493.2,330.9 L495.9,331.2 L498.5,331.6 L501.1,331.9 L503.8,332.3 L506.4,332.6 L509.0,332.9 L511.7,333.3 L514.3,333.6 L516.9,333.9 L519.6,334.2 L522.2,334.5 L524.8,334.8 L527.5,335.1 L530.1,335.4 L532.7,335.6 L535.4,335.9 L538.0,336.2 L540.6,336.5 L543.3,336.8 L545.9,337.1 L548.5,337.4 L551.2,337.7 L553.8,338.0 L556.4,338.3 L559.1,338.6 L561.7,338.9 L564.3,339.2 L567.0,339.5 L569.6,339.8 L572.2,340.1 L574.9,340.4 L577.5,340.7 L580.1,341.0 L582.8,341.3 L585.4,341.6 L588.0,341.9 L590.7,342.2 L593.3,342.4 L595.9,342.7 L598.6,342.9 L601.2,343.2 L603.8,343.5 L606.5,343.7 L609.1,344.0 L611.7,344.2 L614.4,344.5 L617.0,344.7 L619.6,345.0 L622.3,345.2 L624.9,345.5 L627.5,345.7 L630.2,346.0 L632.8,346.3 L635.4,346.5 L638.1,346.8 L640.7,347.0 L643.3,347.3 L646.0,347.3 L648.6,347.4 L651.2,347.5 L653.9,347.5 L656.5,347.6 L659.1,347.7 L661.8,347.7 L664.4,347.8 L667.0,347.8 L669.7,347.9 L672.3,348.0 L674.9,348.0 L677.6,348.1 L680.2,348.2 L682.8,348.2 L685.5,348.3 L688.1,348.4 L690.7,348.4 L693.4,348.5 L696.0,348.5" class="l-c"/>
+<circle cx="348.4" cy="142.0" r="4" class="d-h"/><text x="348.4" y="162.0" class="ann" text-anchor="middle">riunione</text>
+<circle cx="474.8" cy="144.3" r="4" class="d-h"/><text x="474.8" y="164.3" class="ann" text-anchor="middle">traffico</text>
+<circle cx="274.7" cy="264.5" r="5" class="d-c"/>
+<circle cx="380.0" cy="314.2" r="5" class="d-c"/>
+<circle cx="511.7" cy="333.3" r="5" class="d-c"/>
+<circle cx="669.7" cy="347.9" r="5" class="d-c"/>
+<text x="256.2" y="237.5" class="ann" text-anchor="middle">picco al risveglio</text>
+<text x="527.5" y="321.3" class="ann">prelievi salivari</text>
+<text x="148.3" y="45.3" class="ann" text-anchor="middle">recupero notturno</text>
+<line x1="64.0" x2="64.0" y1="360.0" y2="365.0" class="axis"/><text x="64.0" y="382.0" class="tick" text-anchor="middle">00:00</text>
+<line x1="222.0" x2="222.0" y1="360.0" y2="365.0" class="axis"/><text x="222.0" y="382.0" class="tick" text-anchor="middle">06:00</text>
+<line x1="380.0" x2="380.0" y1="360.0" y2="365.0" class="axis"/><text x="380.0" y="382.0" class="tick" text-anchor="middle">12:00</text>
+<line x1="538.0" x2="538.0" y1="360.0" y2="365.0" class="axis"/><text x="538.0" y="382.0" class="tick" text-anchor="middle">18:00</text>
+<line x1="696.0" x2="696.0" y1="360.0" y2="365.0" class="axis"/><text x="696.0" y="382.0" class="tick" text-anchor="middle">24:00</text>
+<line x1="64" x2="696" y1="360.0" y2="360.0" class="axis"/>
+</svg>
+          <figcaption>Schema illustrativo con valori tipici: non sono dati di una persona reale. Le fasce grigie indicano il sonno.</figcaption>
+        </figure>
+        <div class="readings">
+          <div style="--c:var(--heart)"><p><b>Il cuore</b> registra ogni scossone: la riunione delle 11 e il traffico del pomeriggio sono due cali netti della variabilità. Di notte la curva risale: è il recupero.</p></div>
+          <div style="--c:var(--salt)"><p><b>La saliva</b> segue un ritmo più lento: picco dopo il risveglio e discesa fino a sera. I quattro prelievi dell'ASI ne disegnano la forma.</p></div>
+          <div style="--c:var(--ink)"><p><b>Il confronto</b> dice se i due sistemi raccontano la stessa giornata. Quando non lo fanno, vale la pena di capire perché.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="perche">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Due sistemi, due tempi</p>
+        <h2>La risposta allo stress viaggia su due binari</h2>
+        <p class="lede">Il primo è nervoso e rapidissimo; il secondo è ormonale e lento. Guardarne uno solo è come giudicare un concerto ascoltando soltanto gli archi.</p>
+      </div>
+      <div class="pair">
+        <div class="side side-h">
+          <div class="side-top">
+            <div style="display:grid;gap:12px"><span class="tag">Self Coherence · HRV</span><h3>Il cuore: sistema nervoso autonomo</h3></div>
+            <svg viewBox="60 60 180 300" aria-hidden="true" style="width:72px"><use href="#g-device"/></svg>
+          </div>
+          <dl class="facts">
+            <dt>Cosa</dt><dd>La variabilità dell'intervallo tra un battito e l'altro (Heart Rate Variability).</dd>
+            <dt>Tempi</dt><dd>Risponde in secondi. Coglie ogni picco di tensione e ogni momento di recupero.</dd>
+            <dt>Come</dt><dd>Un piccolo dispositivo Firstbeat Bodyguard 3 indossato per più giorni di vita normale; strumenti HeartMath per allenare la coerenza cardiaca.</dd>
+            <dt>Racconta</dt><dd>Bilancio tra stress e recupero, qualità del recupero notturno, carico e dosaggio dell'attività fisica.</dd>
+          </dl>
+        </div>
+        <div class="side side-s">
+          <div class="side-top">
+            <div style="display:grid;gap:12px"><span class="tag">MEDyLAB · Cortisolo</span><h3>La saliva: asse ipotalamo-ipofisi-surrene</h3></div>
+            <svg viewBox="360 110 160 240" aria-hidden="true" style="width:72px"><use href="#g-tube"/></svg>
+          </div>
+          <dl class="facts">
+            <dt>Cosa</dt><dd>Il cortisolo libero, cioè la quota biologicamente attiva, misurato nella saliva.</dd>
+            <dt>Tempi</dt><dd>Risponde in decine di minuti e segue un ritmo di 24 ore: alto al mattino, basso la sera.</dd>
+            <dt>Come</dt><dd>Kit a domicilio: quattro prelievi nella giornata (Adrenal Stress Index) e tre al risveglio (CAR). Il ritiro dei campioni avviene a casa.</dd>
+            <dt>Racconta</dt><dd>La forma del ritmo circadiano e la sua capacità di reagire. Il referto MEDyLAB colloca il profilo in uno di tre fenotipi con un modello statistico sviluppato in laboratorio.</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="quip">Il cuore non mente e la saliva nemmeno: semplicemente parlano di cose diverse.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Il vantaggio dello studio integrato</p>
+        <h2>Perché leggerli insieme</h2>
+      </div>
+      <div class="why">
+        <article>
+          <svg viewBox="0 0 64 40" aria-hidden="true"><path d="M2 26h12l4-12 6 22 4-10h36" class="il-hline" style="stroke-width:2.5"/><path d="M2 30c14 0 18-14 30-14s22 10 30 10" class="il-sline" style="stroke-width:2.5"/></svg>
+          <h3>Quando concordano, la lettura si rafforza</h3>
+          <p>Un recupero notturno scarso sul tracciato HRV e un cortisolo serale che non scende raccontano la stessa storia da due lati. Il margine di dubbio si restringe.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 64 40" aria-hidden="true"><path d="M2 20h12l4-12 6 22 4-10h36" class="il-hline" style="stroke-width:2.5"/><path d="M2 34h60" class="il-sline" style="stroke-width:2.5"/></svg>
+          <h3>Quando non concordano, lì c'è l'informazione</h3>
+          <p>Una variabilità cardiaca che sembra tranquilla accanto a un ritmo del cortisolo appiattito suggerisce che il carico si è spostato da un sistema all'altro. È proprio il caso in cui un esame da solo farebbe concludere che va tutto bene.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 64 40" aria-hidden="true"><rect x="3" y="6" width="58" height="30" rx="5" class="il-ink" style="stroke-width:2"/><path d="M3 14h58" class="il-ink" style="stroke-width:2"/><circle cx="14" cy="25" r="4" class="il-heart"/><circle cx="26" cy="25" r="4" class="il-heart"/><circle cx="38" cy="25" r="4" class="il-heart"/><circle cx="50" cy="25" r="4" class="il-salt"/></svg>
+          <h3>Stessi giorni, stessa vita</h3>
+          <p>Il dispositivo si indossa nei giorni in cui si raccoglie la saliva: le due misure riguardano la stessa settimana. Non due fotografie scattate a mesi di distanza e poi confrontate a memoria.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 64 40" aria-hidden="true"><path d="M4 34h56M4 34V6" class="il-ink" style="stroke-width:2"/><path d="M8 28l12-6 12 2 12-10 14-6" class="il-sline" style="stroke-width:2.5"/><circle cx="8" cy="28" r="3.5" class="il-heart"/><circle cx="58" cy="8" r="3.5" class="il-heart"/></svg>
+          <h3>Un piano che si può ricontrollare</h3>
+          <p>Le strategie su sonno, movimento e gestione dell'energia partono da numeri e si verificano con gli stessi numeri a distanza di tempo. Niente buoni propositi a occhio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="percorso">
+    <div class="wrap route">
+      <div class="route-intro">
+        <p class="eyebrow">Percorso integrato</p>
+        <h2>Wellness: HRV e Adrenal Stress Index in un unico percorso</h2>
+        <p class="lede">Il percorso nasce dalla collaborazione tra i due centri e si acquista sul sito di Self Coherence. Dura 90 giorni e comprende:</p>
+        <ul class="includes">
+          <li class="h">Monitoraggio dei ritmi di vita per 5 giorni con Firstbeat Bodyguard 3</li>
+          <li class="s">Test salivare Adrenal Stress Index di MEDyLAB, eseguito a casa</li>
+          <li>Consulenza nutrizionale con professionisti qualificati</li>
+          <li>Sessione con un Wellness &amp; Performance Advisor e piano personalizzato di 90 giorni</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-solid" href="https://www.selfcoherence.com/products/wellness-ritrova-il-tuo-equilibrio-ogni-giorno" target="_blank" rel="noopener">Prenota su selfcoherence.com ↗</a>
+        </div>
+        <p class="note">La prenotazione parte da un anticipo di 95 €; costi e condizioni completi sono sulla pagina del percorso.</p>
+      </div>
+      <ol class="steps" aria-label="Come funziona il percorso">
+        <li><span class="ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b>Prenoti online</b><span>Versi l'anticipo sul sito di Self Coherence.</span></div><em>01</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Ricevi il kit a casa</b><span>Il dispositivo Bodyguard 3 e il kit salivare MEDyLAB arrivano insieme.</span></div><em>02</em></li>
+        <li><span class="ic h"><svg class="ico"><use href="#i-cal"/></svg></span><div><b>Vivi la tua settimana</b><span>Indossi il dispositivo per 5 giorni e raccogli i campioni di saliva agli orari indicati.</span></div><em>03</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-home"/></svg></span><div><b>Ritiro a domicilio</b><span>Prenoti il ritiro di dispositivo e campioni senza muoverti da casa.</span></div><em>04</em></li>
+        <li><span class="ic s"><svg class="ico"><use href="#i-flask"/></svg></span><div><b>Analisi</b><span>Elaborazione dei dati HRV e analisi di laboratorio: mediamente 10 giorni.</span></div><em>05</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-chat"/></svg></span><div><b>Consulenze e piano</b><span>Il tuo advisor ti illustra i risultati e costruisce con te il piano di 90 giorni.</span></div><em>06</em></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="esami">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Oppure parti da un lato</p>
+        <h2>Esami e servizi</h2>
+        <p class="lede">Ogni link porta al sito dell'azienda che eroga il servizio: acquisti, prenotazioni e referti restano lì.</p>
+      </div>
+
+      <div class="coupon" id="sconto">
+        <div>
+          <p class="eyebrow">Per i clienti Self Coherence</p>
+          <h3>10% di sconto sugli esami MEDyLAB</h3>
+          <p>Inserisci il codice al momento dell'acquisto su medylab-na.it.</p>
+        </div>
+        <div class="code">
+          <span class="big" aria-hidden="true">−10%</span>
+          <output id="coupon-code">selfcoherence10</output>
+          <button class="btn btn-solid" type="button" id="copy-btn">Copia codice</button>
+        </div>
+      </div>
+
+      <div class="shops">
+        <div class="shop m">
+          <div class="shop-head"><h3>MEDyLAB</h3><small>Kit a domicilio in tutta Italia</small></div>
+
+          <p class="grp">La saliva</p>
+          <ul class="links">
+            <li><a href="https://www.medylab-na.it/p/cortisolo-salivare-asi/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-drop"/></svg><b>Cortisolo salivare (ASI)</b><span>Quattro prelievi nella giornata: il ritmo del cortisolo da affiancare al tracciato HRV.</span><i>↗</i></a></li>
+            <li><a href="https://www.medylab-na.it/p/cortisolo-al-risveglio-car/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-sun"/></svg><b>Cortisolo al risveglio (CAR)</b><span>La risposta del mattino: quanto l'asse dello stress è pronto a partire.</span><i>↗</i></a></li>
+            <li><a href="https://www.medylab-na.it/p/cortisolo-salivare-car-asi/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-sun2"/></svg><b>CAR + ASI</b><span>Risveglio e giornata intera nello stesso kit.</span><i>↗</i></a></li>
+            <li><a href="https://www.medylab-na.it/p/pannello-ormoni-sessuali/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ster"/></svg><b>Steroidi salivari</b><span>Sei ormoni steroidei: lo stress cronico si riflette anche sull'equilibrio degli ormoni sessuali.</span><i>↗</i></a></li>
+          </ul>
+
+          <p class="grp">Il metabolismo</p>
+          <ul class="links">
+            <li><a href="https://www.medylab-na.it/p/stima-del-rischio-cardio-metabolico/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-heart"/></svg><b>Rischio cardio-metabolico</b><span>Un referto di 20 pagine: profilo lipidico, indici glicemici ed epatici, rischio cardiovascolare.</span><i>↗</i></a></li>
+          </ul>
+
+          <p class="grp">Per le donne</p>
+          <ul class="links">
+            <li><a href="https://www.medylab-na.it/p/profilo-tiroideo-avanzato/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-thy"/></svg><b>Profilo tiroideo avanzato</b><span>Le disfunzioni tiroidee sono molto più frequenti nelle donne e incidono su energia, sonno e ritmo cardiaco. Tre ormoni e indici funzionali.</span><i>↗</i></a></li>
+          </ul>
+
+          <p class="grp">In casi selezionati<small>Su indicazione del professionista che segue il percorso.</small></p>
+          <ul class="links">
+            <li><a href="https://www.medylab-na.it/p/curva-da-carico-di-glucosio/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-curve"/></svg><b>Curva da carico di glucosio</b><span>Glicemia e insulina nel tempo, con oltre 20 indici nel referto.</span><i>↗</i></a></li>
+            <li><a href="https://www.medylab-na.it/p/funzionalita-renale-avanzata/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-kid"/></svg><b>Funzionalità renale</b><span>Quattro stime del filtrato glomerulare e indici funzionali.</span><i>↗</i></a></li>
+            <li><a href="https://www.medylab-na.it/p/esami-per-calcoli-renali/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-stone"/></svg><b>Esami per calcoli renali</b><span>Dodici analisi per stimare il rischio di calcolosi e capire su cosa intervenire.</span><i>↗</i></a></li>
+          </ul>
+          <a class="btn btn-ghost" style="justify-self:start;margin-top:6px" href="https://www.medylab-na.it/negozio/" target="_blank" rel="noopener">Tutto il catalogo MEDyLAB ↗</a>
+        </div>
+
+        <div class="shop sc">
+          <div class="shop-head"><h3>Self Coherence</h3><small>HRV, consulenze e formazione</small></div>
+          <p class="grp">Misurare</p>
+          <ul class="links">
+            <li><a href="https://www.selfcoherence.com/products/valutazione-e-personalizzazione-del-tuo-stile-di-vita" target="_blank" rel="noopener"><svg class="ico"><use href="#i-dev"/></svg><b>Valutazione dello stile di vita</b><span>Monitoraggio HRV Firstbeat con analisi di stress, recupero, sonno e attività fisica.</span><i>↗</i></a></li>
+            <li><a href="https://www.selfcoherence.com/products/valutazione-dello-stress-e-del-benessere-heartmath-swba" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wave"/></svg><b>Valutazione stress e benessere (SWBA)</b><span>Valutazione HeartMath dello stato di stress e di benessere.</span><i>↗</i></a></li>
+            <li><a href="https://www.selfcoherence.com/pages/self-coherence-life" target="_blank" rel="noopener"><svg class="ico"><use href="#i-heart"/></svg><b>Servizio Self Coherence Life</b><span>Il metodo per bilanciare stress e recupero a partire dalla propria fisiologia.</span><i>↗</i></a></li>
+          </ul>
+          <p class="grp">Allenarsi</p>
+          <ul class="links">
+            <li><a href="https://www.selfcoherence.com/collections/heartmath" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wave"/></svg><b>Dispositivi HeartMath</b><span>Biofeedback della coerenza cardiaca per allenarsi ogni giorno.</span><i>↗</i></a></li>
+            <li><a href="https://www.selfcoherence.com/collections/hrv-per-lo-sport" target="_blank" rel="noopener"><svg class="ico"><use href="#i-curve"/></svg><b>HRV e sport</b><span>Carico, recupero e finestre di allenamento per chi fa attività fisica.</span><i>↗</i></a></li>
+            <li><a href="https://www.selfcoherence.com/pages/prenota-consulenza" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg><b>Prenota una consulenza</b><span>Un primo contatto per capire da dove partire.</span><i>↗</i></a></li>
+          </ul>
+          <a class="btn btn-ghost" style="justify-self:start;margin-top:6px" href="https://www.selfcoherence.com/collections/shop-1" target="_blank" rel="noopener">Tutto lo shop Self Coherence ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap pro">
+      <div class="head" style="margin:0">
+        <p class="eyebrow">Per i professionisti</p>
+        <h2>Medici, nutrizionisti, preparatori, coach</h2>
+        <p class="lede">Self Coherence forma professionisti all'uso della HRV e mantiene una rete di professionisti certificati. MEDyLAB mette a disposizione esami con referti a indici funzionali che si integrano con i dati del monitoraggio.</p>
+      </div>
+      <ul class="links" style="--c:var(--ink)">
+        <li><a href="https://www.selfcoherence.com/products/corso-heart-rate-variability-per-professionisti" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cap"/></svg><b>Corso HRV per professionisti</b><span>Il corso di Self Coherence sulla Heart Rate Variability.</span><i>↗</i></a></li>
+        <li><a href="https://www.selfcoherence.com/pages/rete-professionisti-heart-rate-variability-certificati-self-coherence" target="_blank" rel="noopener"><svg class="ico"><use href="#i-net"/></svg><b>Rete professionisti certificati HRV</b><span>Trova un professionista vicino a te.</span><i>↗</i></a></li>
+        <li><a href="https://www.medylab-na.it/contatti-medylab/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-lab"/></svg><b>Collaborare con MEDyLAB</b><span>Contatti del laboratorio per professionisti sanitari.</span><i>↗</i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="chi">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Chi siamo</p>
+        <h2>Un laboratorio e un centro HRV</h2>
+      </div>
+      <div class="who">
+        <div class="card m">
+          <div class="media">
+            <svg class="fb" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" class="il-ss"/>
+              <g transform="translate(40 30) scale(5.2)" style="fill:none;stroke:var(--salt);stroke-width:.5;opacity:.55"><use href="#i-ster"/></g>
+              <g transform="translate(206 44) scale(2.6)" style="fill:none;stroke:var(--salt);stroke-width:1;opacity:.8"><use href="#i-lab"/></g>
+              <g transform="translate(250 104) scale(1.8)" style="fill:none;stroke:var(--salt);stroke-width:1.3;opacity:.8"><use href="#i-drop"/></g>
+            </svg>
+            <img src="https://www.medylab-na.it/wp-content/uploads/2026/02/laboratorio.jpg" alt="Il laboratorio MEDyLAB a Bologna" loading="lazy" data-fallback>
+          </div>
+          <div class="card-body">
+            <span class="brand">MEDyLAB</span>
+            <p>Laboratorio di biochimica avanzata con sede a Bologna. Offre esami non ancora previsti nei tariffari del Servizio Sanitario e rilegge quelli consolidati con grafici e indici funzionali capaci di intercettare prima gli squilibri. I kit arrivano a casa in tutta Italia.</p>
+            <div class="person">
+              <span class="avatar">GC<img src="https://www.medylab-na.it/wp-content/uploads/2026/02/cardillo.jpg" alt="" loading="lazy" data-fallback></span>
+              <div><b>Dr. Giuseppe Cardillo</b><span>Biochimico clinico, fondatore e direttore sanitario</span></div>
+            </div>
+            <p class="nums">Valutato 4.9 su 5 da oltre 300 recensioni.</p>
+            <a class="go" href="https://www.medylab-na.it/chi-siamo-giuseppe-cardillo/" target="_blank" rel="noopener">medylab-na.it ↗</a>
+          </div>
+        </div>
+        <div class="card sc">
+          <div class="media">
+            <svg class="fb" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" class="il-hs"/>
+              <path d="M0 110 H60 l10 -40 l16 76 l12 -50 l8 14 H150 l10 -40 l16 76 l12 -50 l8 14 H320" style="fill:none;stroke:var(--heart);stroke-width:3;stroke-linejoin:round;opacity:.7"/>
+              <g transform="translate(236 26) scale(2.4)" style="fill:none;stroke:var(--heart);stroke-width:1.1;opacity:.8"><use href="#i-heart"/></g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="brand">Self Coherence</span>
+            <p>Centro milanese specializzato nella Heart Rate Variability: consulenze, formazione e distribuzione di dispositivi di biofeedback. Il metodo Self Coherence Life, sviluppato con i partner Firstbeat Technologies e HeartMath, usa i dati fisiologici della persona per intervenire su stress, recupero, sonno e movimento.</p>
+            <div class="person">
+              <span class="avatar">PD<img src="https://cdn.shopify.com/s/files/1/0733/9067/files/Pino_Di_Ionna_Self_Coherence_pinodiionna_selfcoherence_480x480.png" alt="" loading="lazy" data-fallback></span>
+              <div><b>Pino Di Ionna</b><span>Specialista di HRV e sistema nervoso autonomo</span></div>
+            </div>
+            <a class="go" href="https://www.selfcoherence.com/pages/chi-siamo" target="_blank" rel="noopener">selfcoherence.com ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom:48px">
+    <div class="wrap">
+      <p class="warn">I percorsi descritti in questo sito sono orientati al benessere e non sostituiscono la visita medica. I risultati degli esami vanno discussi con il proprio medico curante.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div><b>MEDyLAB S.r.l.</b>Via Clavature 1, 40124 Bologna<br><span class="nums">P.IVA 04290221201</span></div>
+    <div><b>Self Coherence S.r.l.</b>Via Antonio Stoppani 10, Milano<br><span class="nums">P.IVA 08718480968</span><br>info@selfcoherence.com</div>
+    <div><b>Doppia Lettura</b>Sito informativo comune: gli acquisti avvengono sui siti delle due aziende. Questa pagina non usa cookie e non raccoglie dati personali.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('img[data-fallback]').forEach(function(img){
+    function drop(){ img.remove(); }
+    if (img.complete && img.naturalWidth === 0 && img.src) drop();
+    img.addEventListener('error', drop);
+  });
+  var btn = document.getElementById('copy-btn');
+  var out = document.getElementById('coupon-code');
+  if (!btn || !out) return;
+  btn.addEventListener('click', function(){
+    var code = out.textContent.trim();
+    function selectIt(){
+      var r = document.createRange(); r.selectNodeContents(out);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selezionato: copialo';
+    }
+    try {
+      navigator.clipboard.writeText(code).then(function(){ btn.textContent = 'Codice copiato'; }, selectIt);
+    } catch (e) { selectIt(); }
+    setTimeout(function(){ btn.textContent = 'Copia codice'; }, 2500);
+  });
+})();
+</script>
+</body>
+</html>
