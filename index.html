@@ -212,6 +212,7 @@ section{padding-block:72px}
 .person{display:flex;align-items:center;gap:14px}
 .avatar{position:relative;width:64px;height:64px;border-radius:50%;overflow:hidden;flex:none;background:var(--c);display:grid;place-items:center;color:#fff;font:800 1.2rem var(--display)}
 .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.avatar img.crop-gc{inset:auto;width:386px;height:300px;max-width:none;left:-149px;top:-140px}
 .card.m{--c:var(--salt)} .card.sc{--c:var(--heart)}
 .person b{display:block;color:var(--ink)} .person span{font-size:.92rem;color:var(--muted)}
 .card .go{font-weight:600;text-decoration-thickness:1.5px;text-underline-offset:4px;justify-self:start}
@@ -576,7 +577,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
             <span class="brand">MEDyLAB</span>
             <p>Laboratorio di biochimica avanzata con sede a Bologna. Offre esami non ancora previsti nei tariffari del Servizio Sanitario e rilegge quelli consolidati con grafici e indici funzionali capaci di intercettare prima gli squilibri. I kit arrivano a casa in tutta Italia.</p>
             <div class="person">
-              <span class="avatar">GC<img src="https://www.medylab-na.it/wp-content/uploads/2026/02/cardillo.jpg" alt="" loading="lazy" data-fallback></span>
+              <span class="avatar">GC<img src="https://www.medylab-na.it/wp-content/uploads/2026/02/cardillo.jpg" alt="" loading="lazy" data-fallback class="crop-gc"></span>
               <div><b>Dr. Giuseppe Cardillo</b><span>Biochimico clinico, fondatore e direttore sanitario</span></div>
             </div>
             <p class="nums">Valutato 4.9 su 5 da oltre 300 recensioni.</p>
