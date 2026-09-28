@@ -49,7 +49,7 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 
 ## Da fare
 
-- [ ] **Pino**: creare il prodotto Self Coherence del protocollo, **senza** il test Adrenal Stress Index (che si compra su MEDyLAB), e mandare il link. Il vecchio Wellness non va più usato ed è stato tolto dal sito. Nell'ordine 1 al posto del pulsante c'è la scritta «Ordinabile a breve»: va sostituita con il nuovo link.
+- [ ] **Pino**: creare il prodotto Self Coherence del protocollo, **senza** il test Adrenal Stress Index (che si compra su MEDyLAB) e poi mandare il link. Il vecchio Wellness non va più usato ed è stato tolto dal sito. Nell'ordine 1 al posto del pulsante c'è la scritta «Ordinabile a breve»: va sostituita con il nuovo link.
 - [ ] **Pino**: confermare la qualifica da scrivere accanto al suo nome (oggi: «Specialista di HRV e sistema nervoso autonomo»).
 - [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
