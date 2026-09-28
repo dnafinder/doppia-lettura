@@ -21,6 +21,8 @@ Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva
 
 Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV che si chiudono (di solito la domenica) con la raccolta della saliva per il profilo del cortisolo; i due tracciati sono letti insieme nella consulenza finale da cui nasce il piano di 90 giorni.
 
+**Il messaggio chiave:** chi segue il protocollo riceve tre documenti. Il report HRV di Self Coherence, il referto del cortisolo di MEDyLAB e un **referto combinato** che sovrappone i due tracciati e li legge insieme. Il referto combinato è ciò che rende il protocollo un prodotto unico e non la somma di due servizi.
+
 Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono sanitarie ed esenti IVA mentre quelle di Self Coherence no: vanno fatturate da due soggetti diversi. Sul sito questo è spiegato in una riga, senza farne un problema.
 
 | Ordine | Dove | Contenuto | Link |
@@ -41,6 +43,7 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 
 - [ ] **Pino**: creare il prodotto Self Coherence del protocollo, **senza** il test Adrenal Stress Index (che si compra su MEDyLAB), e mandare il link. Il vecchio Wellness non va più usato ed è stato tolto dal sito. Nell'ordine 1 al posto del pulsante c'è la scritta «Ordinabile a breve»: va sostituita con il nuovo link.
 - [ ] **Pino**: confermare la qualifica da scrivere accanto al suo nome (oggi: «Specialista di HRV e sistema nervoso autonomo»).
+- [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
 ## Come modificare il sito

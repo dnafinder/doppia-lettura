@@ -185,6 +185,14 @@ section{padding-block:72px}
 @media (max-width:900px){.proto{grid-template-columns:1fr;gap:32px}}
 .proto-intro{display:grid;gap:16px}
 .proto-tag{font-family:var(--display);font-weight:500;font-size:1.35rem;color:var(--ink)}
+.docs{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+.doc{flex:1 1 130px;display:grid;gap:2px;padding:14px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.doc .ico{width:30px;height:22px;margin-bottom:6px}
+.doc.h .ico{color:var(--heart)} .doc.s .ico{color:var(--salt)}
+.doc b{font-weight:600;font-size:.98rem} .doc span{font-size:.82rem;color:var(--muted)}
+.doc.x{background:var(--ink);border-color:var(--ink)} .doc.x b{color:var(--bg)} .doc.x span{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.doc.x .ico{fill:none;stroke-width:2.2}
+.plus{align-self:center;font:700 1.3rem var(--display);color:var(--muted)}
 .orders{display:grid;gap:14px}
 .orders-head{display:grid;gap:4px;margin-bottom:4px}
 .orders-head b{font-family:var(--display);font-size:1.15rem}
@@ -388,7 +396,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
         <div class="readings">
           <div style="--c:var(--heart)"><p><b>Il cuore</b> registra ogni scossone: l'allenamento delle 11 e il traffico del rientro sono due cali netti della variabilità. Di notte la curva risale: è il recupero.</p></div>
           <div style="--c:var(--salt)"><p><b>La saliva</b> segue un ritmo più lento: picco dopo il risveglio e discesa fino a sera. I quattro prelievi dell'ASI ne disegnano la forma.</p></div>
-          <div style="--c:var(--ink)"><p><b>Il confronto</b> dice se i due sistemi raccontano la stessa giornata. Quando non lo fanno, vale la pena di capire perché.</p></div>
+          <div style="--c:var(--ink)"><p><b>Il confronto</b> dice se i due sistemi raccontano la stessa giornata. Quando non lo fanno, vale la pena di capire perché: è il compito del referto combinato.</p></div>
         </div>
       </div>
     </div>
@@ -469,12 +477,20 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
           <p class="eyebrow">Il protocollo</p>
           <h2>Protocollo Doppia Lettura</h2>
           <p class="proto-tag">Cinque giorni, due segnali, una sola lettura.</p>
-          <p class="lede">Per cinque giorni di vita normale un sensore registra il tuo cuore battito per battito. L'ultimo giorno, di solito la domenica, raccogli a casa i campioni di saliva per il profilo del cortisolo. Alla fine i due tracciati vengono sovrapposti e letti insieme: su quella lettura si costruisce un piano personale di 90 giorni.</p>
+          <p class="lede">Per cinque giorni di vita normale un sensore registra il tuo cuore battito per battito. L'ultimo giorno, di solito la domenica, raccogli a casa i campioni di saliva per il profilo del cortisolo. Alla fine ricevi tre documenti: il report HRV, il referto del cortisolo e un referto combinato che sovrappone i due tracciati e li legge insieme. Su quella lettura si costruisce il piano personale di 90 giorni.</p>
+          <div class="docs" aria-label="I referti che ricevi">
+            <div class="doc h"><svg class="ico"><use href="#i-wave"/></svg><b>Report HRV</b><span>Self Coherence</span></div>
+            <span class="plus" aria-hidden="true">+</span>
+            <div class="doc s"><svg class="ico"><use href="#i-drop"/></svg><b>Referto cortisolo</b><span>MEDyLAB</span></div>
+            <span class="plus" aria-hidden="true">+</span>
+            <div class="doc x"><svg class="ico" viewBox="0 0 34 22"><path d="M1 11h7l3-8 4 16 3-8h3" style="stroke:var(--heart)"/><circle cx="27" cy="11" r="5" style="fill:var(--salt);stroke:none"/></svg><b>Referto combinato</b><span>Doppia Lettura</span></div>
+          </div>
           <ul class="includes">
             <li class="h">Monitoraggio HRV continuo per 5 giorni con Firstbeat Bodyguard 3</li>
             <li class="s">Profilo del cortisolo salivare (Adrenal Stress Index) con referto MEDyLAB</li>
             <li>Consulenza nutrizionale con professionisti qualificati</li>
-            <li>Lettura integrata con un Wellness &amp; Performance Advisor e piano di 90 giorni</li>
+            <li>Referto combinato cuore e saliva, oltre ai due report singoli</li>
+            <li>Consulenza con un Wellness &amp; Performance Advisor e piano di 90 giorni</li>
           </ul>
         </div>
         <div class="orders">
@@ -505,7 +521,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
         <li><span class="ic h"><svg class="ico"><use href="#i-cal"/></svg></span><div><b>La tua settimana</b><span>Lo schema tipo va da mercoledì a domenica: sensore per 5 giorni e saliva l'ultimo giorno. Il calendario si adatta ai tuoi impegni e lo concordi con Self Coherence.</span></div><em>03</em></li>
         <li><span class="ic"><svg class="ico"><use href="#i-home"/></svg></span><div><b>Ritiro a domicilio</b><span>Prenoti il ritiro del sensore e dei campioni senza muoverti da casa.</span></div><em>04</em></li>
         <li><span class="ic s"><svg class="ico"><use href="#i-flask"/></svg></span><div><b>Analisi</b><span>Elaborazione dei dati HRV e analisi di laboratorio: mediamente 10 giorni.</span></div><em>05</em></li>
-        <li><span class="ic"><svg class="ico"><use href="#i-chat"/></svg></span><div><b>Lettura integrata</b><span>Il tuo advisor legge i due tracciati insieme e costruisce con te il piano di 90 giorni.</span></div><em>06</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-chat"/></svg></span><div><b>Tre referti e il piano</b><span>Ricevi il report HRV, il referto del cortisolo e il referto combinato; con il tuo advisor costruisci il piano di 90 giorni.</span></div><em>06</em></li>
       </ol>
     </div>
   </section>
