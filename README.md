@@ -25,7 +25,7 @@ Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono san
 
 | Ordine | Dove | Contenuto | Link |
 |---|---|---|---|
-| 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, consulenza nutrizionale, advisor, piano di 90 giorni | vedi «Da fare» |
+| 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, consulenza nutrizionale, advisor, piano di 90 giorni | **manca**: sul sito c'è la scritta «Ordinabile a breve» |
 | 2 · La saliva | MEDyLAB | kit e referto Adrenal Stress Index | `https://www.medylab-na.it/carrello/?add-to-cart=4100` |
 
 Schema tipo: il monitoraggio parte il mercoledì e si chiude la domenica con la raccolta della saliva. Non è una regola rigida: calendario e istruzioni li gestisce Self Coherence e il sito lo presenta come schema indicativo.
@@ -39,8 +39,7 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 
 ## Da fare
 
-- [ ] **Pino**: creare la versione del percorso Wellness **senza** il test Adrenal Stress Index, che adesso si compra su MEDyLAB. Finché il sito punta al Wellness attuale, chi segue il protocollo pagherebbe l'ASI due volte. Appena c'è il nuovo link va sostituito nell'ordine 1.
-- [ ] **Pino**: la pagina Wellness attuale parla di uno sconto riservato ai partecipanti al Passatore. Nella versione nuova va tolto.
+- [ ] **Pino**: creare il prodotto Self Coherence del protocollo, **senza** il test Adrenal Stress Index (che si compra su MEDyLAB), e mandare il link. Il vecchio Wellness non va più usato ed è stato tolto dal sito. Nell'ordine 1 al posto del pulsante c'è la scritta «Ordinabile a breve»: va sostituita con il nuovo link.
 - [ ] **Pino**: confermare la qualifica da scrivere accanto al suo nome (oggi: «Specialista di HRV e sistema nervoso autonomo»).
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
