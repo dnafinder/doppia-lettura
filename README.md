@@ -19,7 +19,7 @@ Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva
 
 ## Il Protocollo Doppia Lettura
 
-Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV e, negli stessi giorni, il profilo del cortisolo salivare, letti insieme nella consulenza finale da cui nasce il piano di 90 giorni.
+Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV che si chiudono di domenica con la raccolta della saliva per il profilo del cortisolo; i due tracciati sono letti insieme nella consulenza finale da cui nasce il piano di 90 giorni.
 
 Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono sanitarie ed esenti IVA mentre quelle di Self Coherence no: vanno fatturate da due soggetti diversi. Sul sito questo è spiegato in una riga, senza farne un problema.
 
@@ -40,7 +40,7 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 - [ ] **Pino**: creare la versione del percorso Wellness **senza** il test Adrenal Stress Index, che adesso si compra su MEDyLAB. Finché il sito punta al Wellness attuale, chi segue il protocollo pagherebbe l'ASI due volte. Appena c'è il nuovo link va sostituito nell'ordine 1.
 - [ ] **Pino**: la pagina Wellness attuale parla di uno sconto riservato ai partecipanti al Passatore. Nella versione nuova va tolto.
 - [ ] **Pino**: confermare la qualifica da scrivere accanto al suo nome (oggi: «Specialista di HRV e sistema nervoso autonomo»).
-- [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta nei giorni in cui si indossa il sensore.
+- [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, la domenica, quando il sensore è ancora addosso.
 
 ## Come modificare il sito
 
