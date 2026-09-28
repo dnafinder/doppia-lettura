@@ -180,6 +180,26 @@ section{padding-block:72px}
 .code output{font:500 1.25rem var(--mono);letter-spacing:.06em;padding:10px 16px;border-radius:10px;background:var(--bg);border:1px solid var(--line);user-select:all}
 .big{font-family:var(--display);font-weight:800;font-size:3.2rem;color:var(--gold);line-height:1}
 
+/* protocollo */
+.proto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start;margin-bottom:40px}
+@media (max-width:900px){.proto{grid-template-columns:1fr;gap:32px}}
+.proto-intro{display:grid;gap:16px}
+.proto-tag{font-family:var(--display);font-weight:500;font-size:1.35rem;color:var(--ink)}
+.orders{display:grid;gap:14px}
+.orders-head{display:grid;gap:4px;margin-bottom:4px}
+.orders-head b{font-family:var(--display);font-size:1.15rem}
+.orders-head span{color:var(--muted);font-size:.95rem}
+.order{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px;border-radius:18px;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c)}
+.order.h{--c:var(--heart)} .order.s{--c:var(--salt)}
+.order-n{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font:800 1.4rem var(--display)}
+.order-body{display:grid;gap:8px;justify-items:start}
+.order-body h3{color:var(--c)}
+.order-body p{color:var(--muted)} .order-body b{color:var(--ink)}
+.order-body .eyebrow{color:var(--c)}
+.steps-wide{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps-wide li{border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+@media (max-width:900px){.steps-wide{grid-template-columns:1fr}.steps-wide li{border-right:0}}
+
 /* esami */
 .shops{display:grid;grid-template-columns:1.15fr 1fr;gap:36px}
 @media (max-width:900px){.shops{grid-template-columns:1fr}}
@@ -261,7 +281,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
     </a>
     <nav class="nav" aria-label="Sezioni">
       <a href="#perche">Perché due</a>
-      <a href="#percorso">Il percorso</a>
+      <a href="#percorso">Il protocollo</a>
       <a href="#esami">Esami e servizi</a>
       <a href="#chi">Chi siamo</a>
     </nav>
@@ -276,7 +296,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
         <h1>Lo stress si misura due volte: dal <span class="h">cuore</span> e dalla <span class="s">saliva</span>.</h1>
         <p class="lede">La variabilità della frequenza cardiaca mostra come reagisce il sistema nervoso, minuto per minuto. Il cortisolo salivare mostra quanto quella reazione pesa sull'organismo nell'arco della giornata. Lette insieme, nella stessa settimana, danno un quadro che nessuno dei due esami offre da solo.</p>
         <div class="cta">
-          <a class="btn btn-solid" href="#percorso">Il percorso integrato</a>
+          <a class="btn btn-solid" href="#percorso">Il Protocollo Doppia Lettura</a>
           <a class="btn btn-ghost" href="#esami">Esami e servizi</a>
         </div>
       </div>
@@ -442,29 +462,49 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
   </section>
 
   <section id="percorso">
-    <div class="wrap route">
-      <div class="route-intro">
-        <p class="eyebrow">Percorso integrato</p>
-        <h2>Wellness: HRV e Adrenal Stress Index in un unico percorso</h2>
-        <p class="lede">Il percorso nasce dalla collaborazione tra i due centri e si acquista sul sito di Self Coherence. Dura 90 giorni e comprende:</p>
-        <ul class="includes">
-          <li class="h">Monitoraggio dei ritmi di vita per 5 giorni con Firstbeat Bodyguard 3</li>
-          <li class="s">Test salivare Adrenal Stress Index di MEDyLAB, eseguito a casa</li>
-          <li>Consulenza nutrizionale con professionisti qualificati</li>
-          <li>Sessione con un Wellness &amp; Performance Advisor e piano personalizzato di 90 giorni</li>
-        </ul>
-        <div class="cta">
-          <a class="btn btn-solid" href="https://www.selfcoherence.com/products/wellness-ritrova-il-tuo-equilibrio-ogni-giorno" target="_blank" rel="noopener">Prenota su selfcoherence.com ↗</a>
+    <div class="wrap">
+      <div class="proto">
+        <div class="proto-intro">
+          <p class="eyebrow">Il protocollo</p>
+          <h2>Protocollo Doppia Lettura</h2>
+          <p class="proto-tag">Cinque giorni, due segnali, una sola lettura.</p>
+          <p class="lede">Per cinque giorni di vita normale un sensore registra il tuo cuore battito per battito. Negli stessi giorni raccogli a casa i campioni di saliva per il profilo del cortisolo. Alla fine i due tracciati vengono sovrapposti e letti insieme: su quella lettura si costruisce un piano personale di 90 giorni.</p>
+          <ul class="includes">
+            <li class="h">Monitoraggio HRV continuo per 5 giorni con Firstbeat Bodyguard 3</li>
+            <li class="s">Profilo del cortisolo salivare (Adrenal Stress Index) con referto MEDyLAB</li>
+            <li>Consulenza nutrizionale con professionisti qualificati</li>
+            <li>Lettura integrata con un Wellness &amp; Performance Advisor e piano di 90 giorni</li>
+          </ul>
         </div>
-        <p class="note">La prenotazione parte da un anticipo di 95 €; costi e condizioni completi sono sulla pagina del percorso.</p>
+        <div class="orders">
+          <p class="orders-head"><b>Si attiva con due ordini</b><span>Le prestazioni del laboratorio sono sanitarie ed esenti IVA: la legge chiede di fatturarle a parte. Fai i due ordini lo stesso giorno, così i kit arrivano in tempo per la stessa settimana.</span></p>
+          <div class="order h">
+            <span class="order-n">1</span>
+            <div class="order-body">
+              <p class="eyebrow">Self Coherence</p>
+              <h3>Il cuore</h3>
+              <p>Sensore HRV, consulenze e piano di 90 giorni. La prenotazione parte da un anticipo; costi e condizioni sono sulla pagina.</p>
+              <a class="btn btn-solid" href="https://www.selfcoherence.com/products/wellness-ritrova-il-tuo-equilibrio-ogni-giorno" target="_blank" rel="noopener">Ordina su selfcoherence.com ↗</a>
+            </div>
+          </div>
+          <div class="order s">
+            <span class="order-n">2</span>
+            <div class="order-body">
+              <p class="eyebrow">MEDyLAB</p>
+              <h3>La saliva</h3>
+              <p class="nums">Kit salivare e referto dell'Adrenal Stress Index: <b>134.94 €</b>, che diventano <b>130.00 €</b> se paghi con bonifico.</p>
+              <a class="btn btn-solid" href="https://www.medylab-na.it/carrello/?add-to-cart=4100" target="_blank" rel="noopener">Aggiungi al carrello MEDyLAB ↗</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <ol class="steps" aria-label="Come funziona il percorso">
-        <li><span class="ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b>Prenoti online</b><span>Versi l'anticipo sul sito di Self Coherence.</span></div><em>01</em></li>
-        <li><span class="ic"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Ricevi il kit a casa</b><span>Il dispositivo Bodyguard 3 e il kit salivare MEDyLAB arrivano insieme.</span></div><em>02</em></li>
-        <li><span class="ic h"><svg class="ico"><use href="#i-cal"/></svg></span><div><b>Vivi la tua settimana</b><span>Indossi il dispositivo per 5 giorni e raccogli i campioni di saliva agli orari indicati.</span></div><em>03</em></li>
-        <li><span class="ic"><svg class="ico"><use href="#i-home"/></svg></span><div><b>Ritiro a domicilio</b><span>Prenoti il ritiro di dispositivo e campioni senza muoverti da casa.</span></div><em>04</em></li>
+      <ol class="steps steps-wide" aria-label="Come funziona il protocollo">
+        <li><span class="ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b>Due ordini</b><span>Uno su Self Coherence e uno su MEDyLAB, lo stesso giorno.</span></div><em>01</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Due kit a casa</b><span>Il sensore Bodyguard 3 e il kit salivare arrivano con due spedizioni separate.</span></div><em>02</em></li>
+        <li><span class="ic h"><svg class="ico"><use href="#i-cal"/></svg></span><div><b>La tua settimana</b><span>Indossi il sensore per 5 giorni e in uno di quei giorni raccogli la saliva agli orari indicati.</span></div><em>03</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-home"/></svg></span><div><b>Ritiro a domicilio</b><span>Prenoti il ritiro del sensore e dei campioni senza muoverti da casa.</span></div><em>04</em></li>
         <li><span class="ic s"><svg class="ico"><use href="#i-flask"/></svg></span><div><b>Analisi</b><span>Elaborazione dei dati HRV e analisi di laboratorio: mediamente 10 giorni.</span></div><em>05</em></li>
-        <li><span class="ic"><svg class="ico"><use href="#i-chat"/></svg></span><div><b>Consulenze e piano</b><span>Il tuo advisor ti illustra i risultati e costruisce con te il piano di 90 giorni.</span></div><em>06</em></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-chat"/></svg></span><div><b>Lettura integrata</b><span>Il tuo advisor legge i due tracciati insieme e costruisce con te il piano di 90 giorni.</span></div><em>06</em></li>
       </ol>
     </div>
   </section>
@@ -475,19 +515,6 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
         <p class="eyebrow">Oppure parti da un lato</p>
         <h2>Esami e servizi</h2>
         <p class="lede">Ogni link porta al sito dell'azienda che eroga il servizio: acquisti, prenotazioni e referti restano lì.</p>
-      </div>
-
-      <div class="coupon" id="sconto">
-        <div>
-          <p class="eyebrow">Per i clienti Self Coherence</p>
-          <h3>10% di sconto sugli esami MEDyLAB</h3>
-          <p>Inserisci il codice al momento dell'acquisto su medylab-na.it.</p>
-        </div>
-        <div class="code">
-          <span class="big" aria-hidden="true">−10%</span>
-          <output id="coupon-code">selfcoherence10</output>
-          <button class="btn btn-solid" type="button" id="copy-btn">Copia codice</button>
-        </div>
       </div>
 
       <div class="shops">
