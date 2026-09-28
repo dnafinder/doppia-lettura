@@ -28,6 +28,8 @@ Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono san
 | 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, consulenza nutrizionale, advisor, piano di 90 giorni | vedi «Da fare» |
 | 2 · La saliva | MEDyLAB | kit e referto Adrenal Stress Index | `https://www.medylab-na.it/carrello/?add-to-cart=4100` |
 
+Il monitoraggio parte il mercoledì e si chiude la domenica con la raccolta della saliva. Calendario e istruzioni li gestisce Self Coherence: sul sito non si indicano date.
+
 Il prodotto MEDyLAB ha ID **4100**. È nascosto dal catalogo e raggiungibile solo da questo sito: il link lo mette direttamente nel carrello.
 
 - Prezzo con PayPal: **134.94 €**
