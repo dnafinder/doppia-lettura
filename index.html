@@ -90,7 +90,17 @@ p{margin:0}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:20px}}
 .hero h1{font-size:clamp(2.4rem,5.4vw,3.9rem);font-weight:800;margin-block:14px 20px}
 .hero h1 .h{color:var(--heart)} .hero h1 .s{color:var(--salt)}
-.hero-art svg{width:100%;height:auto;display:block;max-width:560px;margin-inline:auto}
+.defs-holder{position:absolute;width:0;height:0;overflow:hidden}
+.hero-photo{position:relative;margin:0;aspect-ratio:5/4;max-width:100%;border-radius:24px;overflow:hidden;background:var(--salt-soft);box-shadow:0 24px 60px -30px rgba(21,35,42,.45)}
+.hero-fb{position:absolute;inset:8%;width:84%;height:84%}
+.hero-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+.chip{position:absolute;left:16px;top:16px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.92);color:#15232a;font:600 .85rem var(--body)}
+.chip .ico{width:18px;height:18px;color:#1c767c}
+.hero-card{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;border-radius:18px;background:rgba(255,255,255,.95);color:#15232a;max-width:calc(100% - 32px)}
+.hero-card .avatar{width:52px;height:52px;font-size:1rem}
+.hero-card b{display:block;font-weight:700} .hero-card span:not(.avatar){font-size:.85rem;color:#52646b}
+.hero-card .ico{width:30px;height:30px}
+
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:1.5px solid var(--ink);transition:transform .15s ease;font-family:inherit;cursor:pointer}
 .btn:hover{transform:translateY(-1px)}
@@ -295,35 +305,8 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
   <symbol id="i-dev" viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="8" rx="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="19" r="2"/><path d="M5.5 6.4L8 8.5M16 15.5l2.6 2.2"/></symbol>
 </svg>
 
-<header class="top">
-  <div class="wrap">
-    <a class="mark" href="#inizio" aria-label="Doppia Lettura, torna all'inizio">
-      <svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><path d="M1 11h7l3-8 4 16 3-8h3" fill="none" stroke="var(--heart)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="27" cy="11" r="5.5" fill="var(--salt)"/></svg>
-      Doppia Lettura
-    </a>
-    <nav class="nav" aria-label="Sezioni">
-      <a href="#perche">Perché due</a>
-      <a href="#percorso">Il protocollo</a>
-      <a href="#esami">Esami e servizi</a>
-      <a href="#chi">Chi siamo</a>
-    </nav>
-  </div>
-</header>
-
-<main id="inizio">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">MEDyLAB × Self Coherence</p>
-        <h1>Lo stress si misura due volte: dal <span class="h">cuore</span> e dalla <span class="s">saliva</span>.</h1>
-        <p class="lede">La variabilità della frequenza cardiaca mostra come reagisce il sistema nervoso, minuto per minuto. Il cortisolo salivare mostra quanto quella reazione pesa sull'organismo nell'arco della giornata. Lette insieme, nella stessa settimana, danno un quadro che nessuno dei due esami offre da solo.</p>
-        <div class="cta">
-          <a class="btn btn-solid" href="#percorso">Il Protocollo Doppia Lettura</a>
-          <a class="btn btn-ghost" href="#esami">Esami e servizi</a>
-        </div>
-      </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 560 470" role="img" aria-labelledby="hT">
+<div class="defs-holder" aria-hidden="true">
+        <svg viewBox="0 0 560 470" aria-hidden="true" focusable="false">
           <title id="hT">Un sensore cardiaco indossabile e una provetta per la saliva: due strumenti che si sovrappongono nella lettura integrata</title>
           <circle cx="205" cy="220" r="185" class="il-hs"/>
           <circle cx="355" cy="220" r="185" class="il-ss"/>
@@ -361,6 +344,46 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
           <path class="il-hline pulse" d="M20 440 H70 l8 -26 l12 46 l9 -30 l5 10 H150 l8 -26 l12 46 l9 -30 l5 10 H232 l8 -26 l12 46 l9 -30 l5 10 H300"/>
           <path class="il-sline" d="M300 440 C 320 440, 330 404, 350 404 S 400 432, 450 438 S 520 440, 540 440"/>
         </svg>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inizio" aria-label="Doppia Lettura, torna all'inizio">
+      <svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><path d="M1 11h7l3-8 4 16 3-8h3" fill="none" stroke="var(--heart)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="27" cy="11" r="5.5" fill="var(--salt)"/></svg>
+      Doppia Lettura
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="#perche">Perché due</a>
+      <a href="#percorso">Il protocollo</a>
+      <a href="#esami">Esami e servizi</a>
+      <a href="#chi">Chi siamo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inizio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">MEDyLAB × Self Coherence</p>
+        <h1>Lo stress si misura due volte: dal <span class="h">cuore</span> e dalla <span class="s">saliva</span>.</h1>
+        <p class="lede">La variabilità della frequenza cardiaca mostra come reagisce il sistema nervoso, minuto per minuto. Il cortisolo salivare mostra quanto quella reazione pesa sull'organismo nell'arco della giornata. Lette insieme, nella stessa settimana, danno un quadro che nessuno dei due esami offre da solo.</p>
+        <div class="cta">
+          <a class="btn btn-solid" href="#percorso">Il Protocollo Doppia Lettura</a>
+          <a class="btn btn-ghost" href="#esami">Esami e servizi</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <figure class="hero-photo">
+          <svg class="hero-fb" viewBox="0 40 560 400" aria-hidden="true"><circle cx="205" cy="220" r="185" class="il-hs"/><circle cx="355" cy="220" r="185" class="il-ss"/><use href="#g-device"/><use href="#g-tube"/></svg>
+          <img src="https://www.medylab-na.it/wp-content/uploads/2026/02/cardillo.jpg" alt="Giuseppe Cardillo al microscopio nel laboratorio MEDyLAB" data-fallback>
+          <figcaption class="chip chip-s"><svg class="ico"><use href="#i-drop"/></svg>Laboratorio MEDyLAB · Bologna</figcaption>
+          <div class="hero-card">
+            <span class="avatar" style="--c:var(--heart)">PD<img src="https://cdn.shopify.com/s/files/1/0733/9067/files/Pino_Di_Ionna_Self_Coherence_pinodiionna_selfcoherence_480x480.png" alt="" data-fallback></span>
+            <div><b>Pino Di Ionna</b><span>HRV · Self Coherence</span></div>
+            <svg class="ico" style="color:var(--heart)"><use href="#i-wave"/></svg>
+          </div>
+        </figure>
       </div>
     </div>
   </section>
