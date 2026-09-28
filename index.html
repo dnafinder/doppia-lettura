@@ -143,6 +143,19 @@ section{padding-block:72px}
 .facts dd{margin:0}
 .quip{margin-top:26px;font-family:var(--display);font-size:1.25rem;font-weight:500;max-width:52ch}
 
+/* scienza */
+.sci{background:var(--ink);color:var(--bg)}
+.sci .eyebrow,.sci .lede{color:color-mix(in srgb,var(--bg) 72%,transparent)}
+.brakes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:760px){.brakes{grid-template-columns:1fr}}
+.brake{display:grid;gap:10px;align-content:start;padding:26px;border-radius:18px;border:1px solid color-mix(in srgb,var(--bg) 18%,transparent);border-top:4px solid var(--c)}
+.brake.h{--c:var(--heart)} .brake.s{--c:var(--salt)}
+.brake .eyebrow{color:var(--c)}
+.brake p:not(.eyebrow){color:color-mix(in srgb,var(--bg) 82%,transparent)}
+.sci-take{margin-top:28px;font-family:var(--display);font-size:1.3rem;font-weight:500;max-width:60ch}
+.refs{margin:28px 0 0;padding-left:1.4em;display:grid;gap:6px;font-size:.84rem;color:color-mix(in srgb,var(--bg) 65%,transparent);max-width:90ch}
+.refs a{color:inherit;text-underline-offset:3px}
+
 /* perché insieme */
 .why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px}
 @media (max-width:760px){.why{grid-template-columns:1fr;gap:28px}}
@@ -407,7 +420,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
       <div class="head">
         <p class="eyebrow">Due sistemi, due tempi</p>
         <h2>La risposta allo stress viaggia su due binari</h2>
-        <p class="lede">Il primo è nervoso e rapidissimo; il secondo è ormonale e lento. Guardarne uno solo è come giudicare un concerto ascoltando soltanto gli archi.</p>
+        <p class="lede">Il primo è nervoso e rapidissimo; il secondo è ormonale e lento. Tutti e due servono anche a tenere a freno l'infiammazione: guardarne uno solo è come giudicare un concerto ascoltando soltanto gli archi.</p>
       </div>
       <div class="pair">
         <div class="side side-h">
@@ -419,7 +432,7 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
             <dt>Cosa</dt><dd>La variabilità dell'intervallo tra un battito e l'altro (Heart Rate Variability).</dd>
             <dt>Tempi</dt><dd>Risponde in secondi. Coglie ogni picco di tensione e ogni momento di recupero.</dd>
             <dt>Come</dt><dd>Un piccolo dispositivo Firstbeat Bodyguard 3 indossato per più giorni di vita normale; strumenti HeartMath per allenare la coerenza cardiaca.</dd>
-            <dt>Racconta</dt><dd>Bilancio tra stress e recupero, qualità del recupero notturno, carico e dosaggio dell'attività fisica.</dd>
+            <dt>Racconta</dt><dd>Il tono del nervo vago, cioè il freno nervoso sull'infiammazione. E poi bilancio tra stress e recupero, qualità del sonno, carico dell'attività fisica.</dd>
           </dl>
         </div>
         <div class="side side-s">
@@ -431,11 +444,40 @@ footer b{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
             <dt>Cosa</dt><dd>Il cortisolo libero, cioè la quota biologicamente attiva, misurato nella saliva.</dd>
             <dt>Tempi</dt><dd>Risponde in decine di minuti e segue un ritmo di 24 ore: alto al mattino, basso la sera.</dd>
             <dt>Come</dt><dd>Kit a domicilio: quattro prelievi nella giornata (Adrenal Stress Index) e tre al risveglio (CAR). Il ritiro dei campioni avviene a casa.</dd>
-            <dt>Racconta</dt><dd>La forma del ritmo circadiano e la sua capacità di reagire. Il referto MEDyLAB colloca il profilo in uno di tre fenotipi con un modello statistico sviluppato in laboratorio.</dd>
+            <dt>Racconta</dt><dd>La resilienza dell'organismo ai processi infiammatori: il freno ormonale. Il referto MEDyLAB colloca il profilo in uno di tre stati con un modello statistico sviluppato in laboratorio.</dd>
           </dl>
         </div>
       </div>
       <p class="quip">Il cuore non mente e la saliva nemmeno: semplicemente parlano di cose diverse.</p>
+    </div>
+  </section>
+
+  <section class="sci" id="scienza">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Le basi scientifiche</p>
+        <h2>Due freni sulla stessa infiammazione</h2>
+        <p class="lede">L'infiammazione è una risposta utile finché resta sotto controllo. Per tenerla a bada l'organismo usa due freni: uno nervoso e uno ormonale. L'HRV misura il primo, l'ASI il secondo.</p>
+      </div>
+      <div class="brakes">
+        <article class="brake h">
+          <p class="eyebrow">Freno nervoso · HRV</p>
+          <h3>Il nervo vago</h3>
+          <p>Il vago non regola solo il battito. Attraverso il riflesso infiammatorio frena la produzione di citochine da parte dei macrofagi [3]. La variabilità della frequenza cardiaca ne misura il tono: in una metanalisi di studi sull'uomo i valori più bassi si associano a marcatori infiammatori più alti [4].</p>
+        </article>
+        <article class="brake s">
+          <p class="eyebrow">Freno ormonale · ASI</p>
+          <h3>Il cortisolo che arriva a destinazione</h3>
+          <p>Il cortisolo è il principale antinfiammatorio prodotto dall'organismo ma deve raggiungere i tessuti infiammati. Nel lavoro pubblicato su Frontiers in Endocrinology l'Adrenal Stress Index è riletto come misura dell'adattamento all'infiammazione e non come test di «stanchezza surrenalica»: un profilo appiattito segnala che il cortisolo attivo fatica ad arrivare dove serve, con un meccanismo che passa dai neutrofili [1]. Su 2505 profili i dati si distribuiscono in tre stati che cambiano nel tempo [2].</p>
+        </article>
+      </div>
+      <p class="sci-take">Per questo i due esami si completano: l'HRV legge il freno veloce, l'ASI quello lento. Se uno dei due cede, l'altro prova a compensare. Il referto combinato serve a vederlo.</p>
+      <ol class="refs">
+        <li>Cardillo G. Beyond adrenal fatigue: reframing the adrenal stress index through neutrophil-mediated glucocorticoid resistance. <i>Front Endocrinol</i> 2026;17:1785454. <a href="https://doi.org/10.3389/fendo.2026.1785454" target="_blank" rel="noopener">doi:10.3389/fendo.2026.1785454</a></li>
+        <li>Cardillo G. Robust latent phenotypes and longitudinal switching in ASI profiles. Preprint, Zenodo. <a href="https://doi.org/10.5281/zenodo.20447005" target="_blank" rel="noopener">doi:10.5281/zenodo.20447005</a></li>
+        <li>Tracey KJ. The inflammatory reflex. <i>Nature</i> 2002;420:853-859. <a href="https://doi.org/10.1038/nature01321" target="_blank" rel="noopener">doi:10.1038/nature01321</a></li>
+        <li>Williams DP, Koenig J, Carnevali L, et al. Heart rate variability and inflammation: a meta-analysis of human studies. <i>Brain Behav Immun</i> 2019;80:219-226. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0889159118304665" target="_blank" rel="noopener">ScienceDirect</a></li>
+      </ol>
     </div>
   </section>
 

@@ -17,6 +17,14 @@ Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva
 6. **Esami e servizi**: link diretti ai prodotti dei due negozi, per chi vuole partire da un lato solo.
 7. **Professionisti**, **Chi siamo**, avvertenza medica e dati societari.
 
+## Il razionale scientifico
+
+L'ASI è una misura della **resilienza dell'organismo ai processi infiammatori**, non un test di «stanchezza surrenalica». È la tesi dell'articolo di Giuseppe Cardillo su Frontiers in Endocrinology (2026;17:1785454, doi:10.3389/fendo.2026.1785454): un profilo appiattito segnala che il cortisolo attivo fatica ad arrivare ai tessuti infiammati, con un meccanismo che passa dai neutrofili. Il preprint su Zenodo (doi:10.5281/zenodo.20447005) mostra che su 2505 profili i dati si distribuiscono in tre stati che cambiano nel tempo. Il preprint va sempre citato come preprint.
+
+L'HRV si legge negli stessi termini: misura il tono del nervo vago, che attraverso il riflesso infiammatorio frena la produzione di citochine (Tracey, Nature 2002). Una variabilità bassa si associa a marcatori infiammatori più alti (Williams et al., Brain Behav Immun 2019).
+
+Sul sito la sezione si chiama «Due freni sulla stessa infiammazione»: l'HRV legge il freno nervoso e veloce, l'ASI quello ormonale e lento. Per questo i due esami si completano.
+
 ## Il Protocollo Doppia Lettura
 
 Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV che si chiudono (di solito la domenica) con la raccolta della saliva per il profilo del cortisolo; i due tracciati sono letti insieme nella consulenza finale da cui nasce il piano di 90 giorni.
