@@ -54,6 +54,24 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 - [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
+## Regola del turno: un Claude alla volta
+
+Sul sito lavorano due persone con due Claude diversi. Per non sovrascriversi a vicenda vale questa regola, per le persone come per Claude.
+
+1. **Prima di toccare qualsiasi file** si scarica l'ultima versione del repository (`git pull`).
+2. **Se nella cartella principale c'è `lockme.md`, ci sta lavorando l'altro.** Non si modifica niente: si legge il file per sapere chi è e da quando; poi si aspetta.
+3. **Se `lockme.md` non c'è, lo si crea** con tre righe: chi lavora (Giuseppe o Pino), data e ora di inizio, cosa si sta facendo. Poi si fa subito commit e push del solo `lockme.md`, **prima** di qualsiasi altra modifica. Se il push viene rifiutato vuol dire che l'altro è arrivato prima: si scarica di nuovo e si torna al punto 2.
+4. **A lavoro finito** si pubblicano le modifiche e, nello stesso commit o subito dopo, si **cancella** `lockme.md`.
+5. **Se un `lockme.md` resta lì da più di 24 ore**, prima di toglierlo si chiede all'altro. Non si cancella mai il lucchetto altrui senza il suo via libera.
+
+Esempio di `lockme.md`:
+
+```
+Chi: Giuseppe
+Da: 2026-09-29 19:30
+Cosa: aggiornamento dei prezzi del protocollo
+```
+
 ## Come modificare il sito
 
 Il sito è un solo file, `index.html`, con testi, stile e illustrazioni dentro. I font sono nella cartella `fonts/` e non si caricano da Google: per la privacy dei visitatori è meglio così.
@@ -62,7 +80,7 @@ Il sito è un solo file, `index.html`, con testi, stile e illustrazioni dentro. 
 - Le foto di Giuseppe Cardillo e del laboratorio arrivano da medylab-na.it, quella di Pino dal sito di Self Coherence. Se un file viene rinominato o cancellato, al suo posto compare un'illustrazione e la pagina non si rompe.
 - La pagina non usa cookie e non raccoglie dati: non serve un banner.
 
-Se usate Claude per le modifiche, dategli questo file da leggere prima di iniziare: contiene tutte le decisioni prese finora.
+Se usate Claude per le modifiche, dategli questo file da leggere prima di iniziare: contiene tutte le decisioni prese finora e la regola del turno, che Claude deve rispettare.
 
 ## Regole di scrittura
 
