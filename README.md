@@ -80,7 +80,7 @@ Il sito è un solo file, `index.html`, con testi, stile e illustrazioni dentro. 
 - Le foto di Giuseppe Cardillo e del laboratorio arrivano da medylab-na.it, quella di Pino dal sito di Self Coherence. Se un file viene rinominato o cancellato, al suo posto compare un'illustrazione e la pagina non si rompe.
 - La pagina non usa cookie e non raccoglie dati: non serve un banner.
 
-Se usate Claude per le modifiche, dategli questo file da leggere prima di iniziare: contiene tutte le decisioni prese finora e la regola del turno, che Claude deve rispettare.
+Se usate Claude Code, il file `CLAUDE.md` gli dice da solo di leggere questo README e di rispettare la regola del turno. Con altri strumenti dategli voi questo file da leggere prima di iniziare.
 
 ## Regole di scrittura
 
