@@ -9,13 +9,15 @@ Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva
 
 ## Cosa c'è nella pagina
 
-1. **Apertura**: «Lo stress si misura due volte: dal cuore e dalla saliva», con un'illustrazione del sensore HRV e della provetta.
+1. **Apertura**: «Lo stress si misura due volte: dal cuore e dalla saliva», con la foto di Pino e Giuseppe insieme (`img/doppia.jpg`). Se la foto non si carica compare l'illustrazione del sensore HRV e della provetta.
 2. **Una giornata, due tracciati**: grafico schematico di 24 ore con HRV e cortisolo. I valori sono tipici e dichiarati come illustrativi.
 3. **Due sistemi, due tempi**: sistema nervoso autonomo (rapido) contro asse ipotalamo-ipofisi-surrene (lento).
-4. **Perché leggerli insieme**: concordanza, discordanza, stessa settimana, piano verificabile.
-5. **Protocollo Doppia Lettura**: il prodotto comune, spiegato nella sezione successiva.
-6. **Esami e servizi**: link diretti ai prodotti dei due negozi, per chi vuole partire da un lato solo.
-7. **Professionisti**, **Chi siamo**, avvertenza medica e dati societari.
+4. **Due freni sulla stessa infiammazione**: il razionale scientifico, con bibliografia.
+5. **Tre profili, due tracciati**: i tre stati ASI (A coordinato, B alto carico e disorganizzato, C basso buffering) affiancati al profilo HRV atteso per ciascuno. Ridisegna l'infografica di Pino con curve schematiche senza scala numerica. Le percentuali (59.2%, 16.8%, 24.0%) vengono dai 2505 profili del preprint. I profili HRV sono **attesi**, non ancora verificati: va sempre detto.
+6. **Perché leggerli insieme**: concordanza, discordanza, stessa settimana, piano verificabile.
+7. **Protocollo Doppia Lettura**: il prodotto comune, spiegato nella sezione successiva.
+8. **Esami e servizi**: link diretti ai prodotti dei due negozi, per chi vuole partire da un lato solo.
+9. **Professionisti**, **Chi siamo**, avvertenza medica e dati societari.
 
 ## Il razionale scientifico
 
