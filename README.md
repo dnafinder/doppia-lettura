@@ -60,7 +60,7 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 ## Da fare
 
 - [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
-- [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
+- [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. Sensore e kit salivare partono insieme in un'unica spedizione: serve sapere chi la prepara. La saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
 ## Regola del turno: un Claude alla volta
 
