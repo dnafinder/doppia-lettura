@@ -39,7 +39,7 @@ Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono san
 
 | Ordine | Dove | Contenuto | Link |
 |---|---|---|---|
-| 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, consulenza nutrizionale, advisor, piano di 90 giorni | **manca**: sul sito c'è la scritta «Ordinabile a breve» |
+| 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, consulenza nutrizionale, advisor, piano di 90 giorni | `https://www.selfcoherence.com/products/monitoraggio-hrv-5-giorni-adrenal-stress-index` |
 | 2 · La saliva | MEDyLAB | kit e referto Adrenal Stress Index | `https://www.medylab-na.it/carrello/?add-to-cart=4100` |
 
 Schema tipo: il monitoraggio parte il mercoledì e si chiude la domenica con la raccolta della saliva. Non è una regola rigida: calendario e istruzioni li gestisce Self Coherence e il sito lo presenta come schema indicativo.
@@ -49,11 +49,12 @@ Il prodotto MEDyLAB ha ID **4100**. È nascosto dal catalogo e raggiungibile sol
 - Prezzo con PayPal: **134.94 €**
 - Prezzo con bonifico: **130.00 €** (il negozio toglie il 3.4% e poi 0.35 €)
 
+Il prodotto Self Coherence dell'ordine 1 **non** comprende il test Adrenal Stress Index, che si compra su MEDyLAB. Il vecchio Wellness non va più usato.
+
 Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 
 ## Da fare
 
-- [ ] **Pino**: creare il prodotto Self Coherence del protocollo, **senza** il test Adrenal Stress Index (che si compra su MEDyLAB) e poi mandare il link. Il vecchio Wellness non va più usato ed è stato tolto dal sito. Nell'ordine 1 al posto del pulsante c'è la scritta «Ordinabile a breve»: va sostituita con il nuovo link.
 - [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
