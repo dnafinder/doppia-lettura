@@ -15,7 +15,7 @@ Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva
 4. **Due freni sulla stessa infiammazione**: il razionale scientifico, con bibliografia.
 5. **Tre profili, due tracciati**: i tre stati ASI (A coordinato, B alto carico e disorganizzato, C basso buffering) affiancati al profilo HRV atteso per ciascuno. Ridisegna l'infografica di Pino con curve schematiche senza scala numerica. Le percentuali (59.2%, 16.8%, 24.0%) vengono dai 2505 profili del preprint. I profili HRV sono **attesi**, non ancora verificati: va sempre detto.
 6. **Perché leggerli insieme**: concordanza, discordanza, stessa settimana, piano verificabile.
-7. **Protocollo Doppia Lettura**: il prodotto comune, spiegato nella sezione successiva.
+7. **Metodo Doppia Lettura**: il prodotto comune, spiegato nella sezione successiva.
 8. **Esami e servizi**: link diretti ai prodotti dei due negozi, per chi vuole partire da un lato solo.
 9. **Professionisti**, **Chi siamo**, avvertenza medica e dati societari.
 
@@ -29,17 +29,21 @@ L'HRV si legge negli stessi termini: misura il tono del nervo vago, che attraver
 
 Sul sito la sezione si chiama «Due freni sulla stessa infiammazione»: l'HRV legge il freno nervoso e veloce, l'ASI quello ormonale e lento. Per questo i due esami si completano.
 
-## Il Protocollo Doppia Lettura
+## Il Metodo Doppia Lettura
 
-Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV che si chiudono (di solito la domenica) con la raccolta della saliva per il profilo del cortisolo; i due tracciati sono letti insieme nella consulenza finale da cui nasce il piano di 90 giorni.
+Si chiama «metodo» e non «protocollo» perché «protocollo» suona come un termine medico. Su Shopify il prodotto si chiama «Monitoraggio HRV 5 giorni - Metodo doppia lettura».
 
-**Il messaggio chiave:** chi segue il protocollo riceve tre documenti. Il report HRV di Self Coherence, il referto del cortisolo di MEDyLAB e un **referto combinato** che sovrappone i due tracciati e li legge insieme. Il referto combinato è ciò che rende il protocollo un prodotto unico e non la somma di due servizi.
+Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV che si chiudono (di solito la domenica) con la raccolta della saliva per il profilo del cortisolo; i due tracciati sono letti insieme nella consulenza finale con Pino e Giuseppe.
+
+**Il messaggio chiave:** chi segue il metodo riceve tre documenti. Il report HRV di Self Coherence, il referto del cortisolo di MEDyLAB e un **referto combinato** che sovrappone i due tracciati e li legge insieme. Il referto combinato è ciò che rende il metodo un prodotto unico e non la somma di due servizi.
 
 Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono sanitarie ed esenti IVA mentre quelle di Self Coherence no: vanno fatturate da due soggetti diversi. Sul sito questo è spiegato in una riga, senza farne un problema.
 
+I contenuti dell'ordine 1 sul sito seguono la pagina Shopify: niente consulenza nutrizionale, niente advisor né piano di 90 giorni. Se Pino cambia la pagina Shopify va aggiornato anche il sito.
+
 | Ordine | Dove | Contenuto | Link |
 |---|---|---|---|
-| 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, consulenza nutrizionale, advisor, piano di 90 giorni | `https://www.selfcoherence.com/products/monitoraggio-hrv-5-giorni-adrenal-stress-index` |
+| 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, app Firstbeat Life, consulenza finale con Pino e Giuseppe · **170.00 €** IVA inclusa | `https://www.selfcoherence.com/products/monitoraggio-hrv-5-giorni-adrenal-stress-index` |
 | 2 · La saliva | MEDyLAB | kit e referto Adrenal Stress Index | `https://www.medylab-na.it/carrello/?add-to-cart=4100` |
 
 Schema tipo: il monitoraggio parte il mercoledì e si chiude la domenica con la raccolta della saliva. Non è una regola rigida: calendario e istruzioni li gestisce Self Coherence e il sito lo presenta come schema indicativo.
@@ -73,7 +77,7 @@ Esempio di `lockme.md`:
 ```
 Chi: Giuseppe
 Da: 2026-09-29 19:30
-Cosa: aggiornamento dei prezzi del protocollo
+Cosa: aggiornamento dei prezzi del metodo
 ```
 
 ## Come modificare il sito
@@ -92,4 +96,4 @@ Se usate Claude Code, il file `CLAUDE.md` gli dice da solo di leggere questo REA
 - Niente virgola prima di «e», «ma», «o», «perché» e simili.
 - Separatore decimale: il punto (134.94, non 134,94).
 - Nessun consiglio alimentare nei testi: la nutrizione resta affidata ai professionisti del percorso.
-- Non si scrive «percorso clinico»: il protocollo è orientato al benessere e non sostituisce il medico.
+- Non si scrive «percorso clinico»: il metodo è orientato al benessere e non sostituisce il medico.

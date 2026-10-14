@@ -18,4 +18,4 @@ Questo repository è il sito «Doppia Lettura» di MEDyLAB (Giuseppe Cardillo) e
 - Non caricare risorse da siti esterni (font, immagini, script): tutto deve stare nel repository.
 - Non pubblicare cambiamenti che l'utente non ha chiesto: proponi e aspetta il via libera.
 - Testi in italiano, secondo le regole di scrittura del README. Mai consigli alimentari. Il preprint su Zenodo si cita sempre come preprint.
-- Aggiorna il README quando cambia una decisione (prezzi, link, contenuti del protocollo, cose da fare).
+- Aggiorna il README quando cambia una decisione (prezzi, link, contenuti del metodo, cose da fare).
