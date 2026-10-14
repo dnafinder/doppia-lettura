@@ -5,7 +5,7 @@ Sito comune di **MEDyLAB** (Giuseppe Cardillo) e **Self Coherence** (Giuseppe «
 - Indirizzo pubblico: https://dnafinder.github.io/doppia-lettura/
 - QR code da usare agli incontri: `qr-doppia-lettura.png` (per stampe grandi c'è anche la versione SVG, fuori dal repository)
 
-Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva e rimanda ai due negozi. Acquisti, fatture e referti restano sui siti madre.
+Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva e rimanda ai due negozi. Acquisti, fatture e report restano sui siti madre.
 
 ## Cosa c'è nella pagina
 
@@ -35,7 +35,7 @@ Si chiama «metodo» e non «protocollo» perché «protocollo» suona come un t
 
 Si presenta come un prodotto unico: cinque giorni di monitoraggio HRV che si chiudono (di solito la domenica) con la raccolta della saliva per il profilo del cortisolo; i due tracciati sono letti insieme nella consulenza finale con Pino e Giuseppe.
 
-**Il messaggio chiave:** chi segue il metodo riceve tre documenti. Il report HRV di Self Coherence, il referto del cortisolo di MEDyLAB e un **referto combinato** che sovrappone i due tracciati e li legge insieme. Il referto combinato è ciò che rende il metodo un prodotto unico e non la somma di due servizi.
+**Il messaggio chiave:** chi segue il metodo riceve tre documenti. Il report HRV di Self Coherence, il report del cortisolo di MEDyLAB e un **report combinato** che sovrappone i due tracciati e li legge insieme. Il report combinato è ciò che rende il metodo un prodotto unico e non la somma di due servizi.
 
 Si attiva con **due ordini separati** perché le prestazioni di MEDyLAB sono sanitarie ed esenti IVA mentre quelle di Self Coherence no: vanno fatturate da due soggetti diversi. Sul sito questo è spiegato in una riga, senza farne un problema.
 
@@ -44,7 +44,7 @@ I contenuti dell'ordine 1 sul sito seguono la pagina Shopify: niente consulenza 
 | Ordine | Dove | Contenuto | Link |
 |---|---|---|---|
 | 1 · Il cuore | Self Coherence | Bodyguard 3 per 5 giorni, app Firstbeat Life, consulenza finale con Pino e Giuseppe · **170.00 €** IVA inclusa | `https://www.selfcoherence.com/products/monitoraggio-hrv-5-giorni-adrenal-stress-index` |
-| 2 · La saliva | MEDyLAB | kit e referto Adrenal Stress Index | `https://www.medylab-na.it/carrello/?add-to-cart=4100` |
+| 2 · La saliva | MEDyLAB | kit e report Adrenal Stress Index | `https://www.medylab-na.it/carrello/?add-to-cart=4100` |
 
 Schema tipo: il monitoraggio parte il mercoledì e si chiude la domenica con la raccolta della saliva. Non è una regola rigida: calendario e istruzioni li gestisce Self Coherence e il sito lo presenta come schema indicativo.
 
@@ -59,7 +59,7 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 
 ## Da fare
 
-- [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
+- [ ] **Entrambi**: definire formato, contenuti e firma del report combinato e chi lo prepara.
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. Sensore e kit salivare partono insieme in un'unica spedizione: serve sapere chi la prepara. La saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
 ## Regola del turno: un Claude alla volta
@@ -96,4 +96,5 @@ Se usate Claude Code, il file `CLAUDE.md` gli dice da solo di leggere questo REA
 - Niente virgola prima di «e», «ma», «o», «perché» e simili.
 - Separatore decimale: il punto (134.94, non 134,94).
 - Nessun consiglio alimentare nei testi: la nutrizione resta affidata ai professionisti del percorso.
+- Non si scrive «referto» né «protocollo», che suonano medici: si usano «report» e «metodo».
 - Non si scrive «percorso clinico»: il metodo è orientato al benessere e non sostituisce il medico.
