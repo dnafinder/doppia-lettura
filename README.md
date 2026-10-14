@@ -1,6 +1,6 @@
 # Doppia Lettura
 
-Sito comune di **MEDyLAB** (Giuseppe Cardillo) e **Self Coherence** (Pino Di Ionna) sullo studio integrato di variabilità cardiaca (HRV) e cortisolo salivare.
+Sito comune di **MEDyLAB** (Giuseppe Cardillo) e **Self Coherence** (Giuseppe «Pino» Di Ionna) sullo studio integrato di variabilità cardiaca (HRV) e cortisolo salivare.
 
 - Indirizzo pubblico: https://dnafinder.github.io/doppia-lettura/
 - QR code da usare agli incontri: `qr-doppia-lettura.png` (per stampe grandi c'è anche la versione SVG, fuori dal repository)
@@ -18,6 +18,8 @@ Il sito non vende niente: spiega perché conviene leggere insieme cuore e saliva
 7. **Protocollo Doppia Lettura**: il prodotto comune, spiegato nella sezione successiva.
 8. **Esami e servizi**: link diretti ai prodotti dei due negozi, per chi vuole partire da un lato solo.
 9. **Professionisti**, **Chi siamo**, avvertenza medica e dati societari.
+
+Sul sito il nome è sempre **Giuseppe Di Ionna** (non «Pino») con la qualifica **Specialista HRV**. Self Coherence si presenta come «Centro specializzato nella valutazione della Heart Rate Variability per applicazioni benessere e performance». Qui nel README e in `lockme.md` resta «Pino» per distinguerlo da Giuseppe Cardillo.
 
 ## Il razionale scientifico
 
@@ -52,7 +54,6 @@ Il vecchio codice sconto `selfcoherence10` non compare più sul sito.
 ## Da fare
 
 - [ ] **Pino**: creare il prodotto Self Coherence del protocollo, **senza** il test Adrenal Stress Index (che si compra su MEDyLAB) e poi mandare il link. Il vecchio Wellness non va più usato ed è stato tolto dal sito. Nell'ordine 1 al posto del pulsante c'è la scritta «Ordinabile a breve»: va sostituita con il nuovo link.
-- [ ] **Pino**: confermare la qualifica da scrivere accanto al suo nome (oggi: «Specialista di HRV e sistema nervoso autonomo»).
 - [ ] **Entrambi**: definire formato, contenuti e firma del referto combinato e chi lo prepara.
 - [ ] **Entrambi**: decidere chi avvisa chi quando arriva un ordine. I kit partono da due magazzini diversi e la saliva va raccolta l'ultimo giorno di monitoraggio, di solito la domenica, quando il sensore è ancora addosso.
 
